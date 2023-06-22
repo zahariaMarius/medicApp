@@ -1,4 +1,4 @@
-package com.example.doctorapp.data.remote.mappers
+package com.example.doctorapp.data.remote.mappers.response
 
 import com.example.doctorapp.data.remote.dto.DoctorDto
 import com.example.doctorapp.data.remote.dto.response.RemoteResponseDto

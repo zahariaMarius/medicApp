@@ -9,7 +9,7 @@ data class Patient(
     val fiscalCode: String,
     val gender: Gender,
     val birthdayDate: Date,
-    val residenceAddress: Address,
-    val homeAddress: Address,
+    val residenceAddress: String,
+    val homeAddress: String,
     val doctorFiscalCode: String
 )

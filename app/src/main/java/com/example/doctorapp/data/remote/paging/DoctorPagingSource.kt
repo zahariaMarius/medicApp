@@ -1,11 +1,9 @@
 package com.example.doctorapp.data.remote.paging
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.doctorapp.data.remote.api.DoctorApi
 import com.example.doctorapp.data.remote.dto.request.DoctorRequestDto
-import com.example.doctorapp.data.remote.mappers.toDoctor
+import com.example.doctorapp.data.remote.mappers.response.toDoctor
 import com.example.doctorapp.domain.model.Doctor
 import com.example.doctorapp.domain.repository.DoctorRepository
 import java.lang.Exception

@@ -26,7 +26,8 @@ fun SignInNavHost(
             route = AuthScreen.SignIn.route
         ) {
             SignInScreen(
-                onSignInClick = { rootNavHostController.navigate(Graph.HOME) },
+//                onSignInClick = { rootNavHostController.navigate(Graph.HOME) },
+                onSignInClickSuccess = { rootNavHostController.navigate(Graph.HOME) },
                 onSignUpClick = { rootNavHostController.navigate(Graph.SIGNUP) }
             )
         }
