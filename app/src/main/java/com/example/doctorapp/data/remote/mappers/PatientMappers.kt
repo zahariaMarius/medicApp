@@ -7,7 +7,7 @@ import java.lang.Integer.parseInt
 
 fun PatientDto.toPatientEntity(): PatientEntity {
     return PatientEntity(
-        id=parseInt(id),
+        id=id,
         name=name,
         surname=surname,
         email=email,

@@ -1,11 +1,16 @@
 package com.example.doctorapp.di
 
+import android.content.Context
+import androidx.room.Room
 import com.example.doctorapp.common.Constants
-import com.example.doctorapp.data.remote.api.DoctorApi
+import com.example.doctorapp.data.local.database.DoctorDatabase
+import com.example.doctorapp.data.local.database.PatientDatabase
+import com.example.doctorapp.data.remote.api.AuthApi
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -31,7 +36,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(DoctorApi.BASE_URL)
+            .baseUrl(AuthApi.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(
                 GsonConverterFactory.create(
@@ -43,6 +48,23 @@ object AppModule {
             .build()
     }
 
+    @Provides
+    @Singleton
+    fun providePatientDatabase(@ApplicationContext applicationContext: Context): PatientDatabase {
+        return Room.databaseBuilder(
+            context = applicationContext,
+            PatientDatabase::class.java,
+            "patient.db"
+        ).build()
+    }
 
-
+    @Provides
+    @Singleton
+    fun provideDoctorDatabase(@ApplicationContext applicationContext: Context): DoctorDatabase {
+        return Room.databaseBuilder(
+            context = applicationContext,
+            DoctorDatabase::class.java,
+            "doctor.db"
+        ).build()
+    }
 }

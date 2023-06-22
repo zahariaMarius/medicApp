@@ -30,8 +30,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 fun SignInScreen(
     viewModel: SignInScreenViewModel = hiltViewModel(),
     onSignUpClick: () -> Unit,
-//    onSignInClick: () -> Unit,
-    onSignInClickSuccess: () -> Unit
+    onSignInSuccess: () -> Unit
 ) {
     Column(
         modifier = Modifier,
@@ -77,7 +76,7 @@ fun SignInScreen(
             }
         )
         Button(onClick = {
-            viewModel.signIn()
+            viewModel.signIn(onSuccessCallback = onSignInSuccess)
         }) {
             Text(text = "Sign In")
         }

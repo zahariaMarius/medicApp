@@ -11,8 +11,8 @@ import java.util.Date
 @Entity
 @TypeConverters(DateTypeConverter::class)
 data class PatientEntity(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    @PrimaryKey
+    val id: String,
     val name: String,
     val surname: String,
     val email: String,

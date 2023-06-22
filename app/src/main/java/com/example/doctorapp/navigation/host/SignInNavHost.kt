@@ -27,7 +27,7 @@ fun SignInNavHost(
         ) {
             SignInScreen(
 //                onSignInClick = { rootNavHostController.navigate(Graph.HOME) },
-                onSignInClickSuccess = { rootNavHostController.navigate(Graph.HOME) },
+                onSignInSuccess = { rootNavHostController.navigate(Graph.HOME) },
                 onSignUpClick = { rootNavHostController.navigate(Graph.SIGNUP) }
             )
         }

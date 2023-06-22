@@ -13,13 +13,18 @@ import com.example.doctorapp.domain.model.Patient
 interface PatientDao {
 
     @Insert
-    fun insertAll(vararg patient: PatientEntity)
+    suspend fun insert(patient: PatientEntity)
+
+    @Upsert
+    suspend fun upsertAll(patient: PatientEntity)
+
+    @Query("DELETE FROM patiententity")
+    suspend fun clearAll()
 
     @Delete
     fun delete(patient: PatientEntity)
 
-    @Query("SELECT * FROM patiententity")
-    fun getAll(): List<PatientEntity>
-
+    @Query("SELECT * FROM patiententity WHERE email = :email")
+    fun get(email: String): PatientEntity
 
 }
