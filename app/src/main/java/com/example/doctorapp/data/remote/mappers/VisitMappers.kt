@@ -6,22 +6,26 @@ import com.example.doctorapp.domain.model.Visit
 
 fun VisitDto.toVisitEntity(): VisitEntity {
     return VisitEntity(
-        id=id,
-        dateTime=dateTime,
-        doctor=doctor.toDoctorEntity(),
-        status=status,
-        online=online,
-        urlMeet=urlMeet
+        id = id,
+        dateTime = dateTime,
+        doctorName = doctor.name,
+        doctorSurname = doctor.surname,
+        doctorFiscalCode = doctor.fiscalCode,
+        status = status,
+        online = online,
+        urlMeet = urlMeet
     )
 }
 
 fun VisitEntity.toVisit(): Visit {
     return Visit(
-        id=id,
-        dateTime=dateTime,
-        doctor=doctor.toDoctor(),
-        status=status,
-        online=online,
-        urlMeet=urlMeet
+        id = id,
+        dateTime = dateTime,
+        doctorName = doctorName,
+        doctorSurname = doctorSurname,
+        doctorFiscalCode = doctorFiscalCode,
+        status = status,
+        online = online,
+        urlMeet = urlMeet
     )
 }

@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     RootNavHost(
-                        startDestination = Graph.AUTH,
+                        startDestination = Graph.HOME,
                     )
                 }
             }

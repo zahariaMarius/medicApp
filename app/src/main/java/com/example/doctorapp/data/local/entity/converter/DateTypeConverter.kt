@@ -1,4 +1,4 @@
-package com.example.doctorapp.data.local.entity
+package com.example.doctorapp.data.local.entity.converter
 import androidx.room.TypeConverter
 import java.util.Date
 

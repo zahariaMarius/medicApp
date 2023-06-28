@@ -12,7 +12,6 @@ import com.example.doctorapp.domain.use_case.auth.SignInUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import org.json.JSONObject
 import javax.inject.Inject
 
 
@@ -24,6 +23,7 @@ class SignInScreenViewModel @Inject constructor(
     var email by mutableStateOf("")
     var password by mutableStateOf("")
     var passwordHidden by mutableStateOf(true)
+    var inLoading by mutableStateOf(false)
 
     fun signIn(onSuccessCallback: () -> Unit) {
 
@@ -31,13 +31,20 @@ class SignInScreenViewModel @Inject constructor(
 
         signInUseCase(authRequestDto).onEach { result ->
             when (result) {
-                is Resource.Loading -> Log.d("SIGNINMODEL", "sono in loading")
+                is Resource.Loading -> {
+                    Log.d("SIGNINMODEL", "sono in loading")
+                    inLoading = !inLoading
+                }
+
                 is Resource.Success -> {
                     Log.d("SIGNINMODEL", result.toString())
                     onSuccessCallback.invoke()
                 }
 
-                is Resource.Error -> Log.d("SIGNINMODEL", result.toString())
+                is Resource.Error -> {
+                    inLoading = !inLoading
+                    Log.d("SIGNINMODEL", result.toString())
+                }
             }
         }.launchIn(viewModelScope)
     }

@@ -10,6 +10,7 @@ import com.example.doctorapp.navigation.screen.HomeScreen
 import com.example.doctorapp.presentation.home.HomeScreen
 import com.example.doctorapp.presentation.home.book_visit.BookVisitScreen
 import com.example.doctorapp.presentation.home.request_prescription.RequestPrescriptionScreen
+import com.example.doctorapp.presentation.home.visit.VisitScreen
 
 @Composable
 fun HomeNavHost(
@@ -26,7 +27,7 @@ fun HomeNavHost(
         composable(
             route = HomeScreen.Home.route
         ) {
-            HomeScreen()
+            VisitScreen()
         }
         composable(
             route = HomeScreen.BookVisit.route

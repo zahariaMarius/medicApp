@@ -3,7 +3,7 @@ package com.example.doctorapp.data.local.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.example.doctorapp.domain.model.Address
+import com.example.doctorapp.data.local.entity.converter.DateTypeConverter
 import com.example.doctorapp.domain.model.Gender
 import java.util.Date
 
