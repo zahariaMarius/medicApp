@@ -124,7 +124,7 @@ fun SignInScreen(
                 Text(
                     modifier = Modifier
                         .clickable { onSignUpClick() },
-                    text = "Sign up",
+                    text = "Sign Up",
                     fontWeight = FontWeight.Bold
                 )
             }

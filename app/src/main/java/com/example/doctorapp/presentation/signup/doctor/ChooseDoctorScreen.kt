@@ -60,13 +60,15 @@ fun ChooseDoctorScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(32.dp)
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "Choose your doctor",
+                text = "Doctor",
                 style = MaterialTheme.typography.headlineLarge
+            )
+            Text(
+                text = "Choose your doctor",
             )
         }
 
@@ -74,8 +76,11 @@ fun ChooseDoctorScreen(
             LoadState.Loading -> {
                 Log.d("DOC", "sono in loading")
                 Column(
-                    modifier = Modifier.fillMaxHeight(),
-                    verticalArrangement = Arrangement.Center
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .fillMaxWidth(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     CircularProgressIndicator()
                 }
