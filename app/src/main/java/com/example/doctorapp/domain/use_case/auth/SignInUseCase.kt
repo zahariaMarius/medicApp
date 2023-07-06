@@ -5,6 +5,7 @@ import androidx.room.withTransaction
 import com.example.doctorapp.common.Resource
 import com.example.doctorapp.data.local.database.PatientDatabase
 import com.example.doctorapp.data.remote.dto.request.AuthRequestDto
+import com.example.doctorapp.data.remote.mappers.toPatient
 import com.example.doctorapp.data.remote.mappers.toPatientEntity
 import com.example.doctorapp.domain.model.Patient
 import com.example.doctorapp.domain.repository.AuthRepository
@@ -30,7 +31,15 @@ class SignInUseCase @Inject constructor(
                 )
             }
 
-            emit(Resource.Success())
+            val patientEntity = patientDb.withTransaction {
+                patientDb.dao.getByEmail(remoteResponseDto.resultDto.items.first().email)
+            }
+
+            emit(
+                Resource.Success(
+                    data = patientEntity.toPatient()
+                )
+            )
 
         } catch (e: Exception) {
             Log.d("USECASE", e.toString())

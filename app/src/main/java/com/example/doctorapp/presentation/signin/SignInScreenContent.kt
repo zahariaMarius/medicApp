@@ -28,10 +28,6 @@ fun SignInScreenContent(
     rootNavHostController: NavHostController,
     navHostController: NavHostController = rememberNavController()
 ) {
-
-    val snackbarHostState = remember { SnackbarHostState() }
-    val scope = rememberCoroutineScope()
-
     Scaffold(
         topBar = {
             TopAppBar(

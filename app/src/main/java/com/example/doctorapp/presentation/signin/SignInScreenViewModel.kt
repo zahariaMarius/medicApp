@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.doctorapp.common.Resource
 import com.example.doctorapp.data.remote.dto.request.AuthRequestDto
 import com.example.doctorapp.domain.use_case.auth.SignInUseCase
+import com.example.doctorapp.session.SessionManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -17,7 +18,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SignInScreenViewModel @Inject constructor(
-    private val signInUseCase: SignInUseCase
+    private val signInUseCase: SignInUseCase,
+    private val sessionManager: SessionManager
 ) : ViewModel() {
 
     var email by mutableStateOf("")
@@ -38,6 +40,7 @@ class SignInScreenViewModel @Inject constructor(
 
                 is Resource.Success -> {
                     Log.d("SIGNINMODEL", result.toString())
+                    sessionManager.setLoggedUser(result.data!!.fiscalCode)
                     onSuccessCallback.invoke()
                 }
 

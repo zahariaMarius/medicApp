@@ -10,8 +10,10 @@ import com.example.doctorapp.navigation.screen.AuthScreen
 import com.example.doctorapp.navigation.screen.SignUpScreen
 import com.example.doctorapp.presentation.signin.SignInScreen
 import com.example.doctorapp.presentation.signup.SignUpScreen
+import com.example.doctorapp.presentation.signup.SignUpScreenViewModel
 import com.example.doctorapp.presentation.signup.doctor.ChooseDoctorScreen
 import com.example.doctorapp.presentation.signup.information.PatientInformationScreen
+import com.example.doctorapp.presentation.signup.summary.SummaryScreen
 
 @Composable
 fun SignUpNavHost(
@@ -19,6 +21,7 @@ fun SignUpNavHost(
     rootNavHostController: NavHostController,
     navHostController: NavHostController,
     startDestination: String,
+    viewModel: SignUpScreenViewModel
 ) {
     NavHost(
         modifier = modifier,
@@ -35,7 +38,8 @@ fun SignUpNavHost(
                 },
                 onSignInClick = {
                     rootNavHostController.navigate(Graph.AUTH)
-                }
+                },
+                viewModel = viewModel
             )
         }
         composable(
@@ -44,13 +48,40 @@ fun SignUpNavHost(
             PatientInformationScreen(
                 onContinueClick = {
                     navHostController.navigate(SignUpScreen.ChooseDoctor.route)
-                }
+                },
+                viewModel = viewModel
             )
         }
         composable(
             route = SignUpScreen.ChooseDoctor.route
         ) {
-            ChooseDoctorScreen()
+            ChooseDoctorScreen(
+                onContinueClick = {
+                    navHostController.navigate(SignUpScreen.Summary.route)
+                },
+                viewModel = viewModel
+            )
+        }
+        composable(
+            route = SignUpScreen.Summary.route
+        ) {
+            SummaryScreen(
+                viewModel = viewModel,
+                onBasicInformationEditClick = {
+                    navHostController.navigate(SignUpScreen.SignUp.route)
+                },
+                onInformationEditClick = {
+                    navHostController.navigate(SignUpScreen.PatientInformation.route)
+
+                },
+                onDoctorEditClick = {
+                    navHostController.navigate(SignUpScreen.ChooseDoctor.route)
+
+                },
+                onSignUpSuccess = {
+                    rootNavHostController.navigate(Graph.AUTH)
+                }
+            )
         }
     }
 }

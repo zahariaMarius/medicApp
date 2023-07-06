@@ -12,8 +12,4 @@ interface VisitApi {
     suspend fun getVisits(
         @Body visitsRequestDto: VisitsRequestDto
     ): RemoteResponseDto<VisitDto>
-
-    companion object {
-        const val BASE_URL = "http://10.0.2.2:8091/api/visit/"
-    }
 }

@@ -1,5 +1,8 @@
 package com.example.doctorapp.domain.model
 
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.Date
 
 data class Patient(
@@ -9,7 +12,13 @@ data class Patient(
     val fiscalCode: String,
     val gender: Gender,
     val birthdayDate: Date,
-    val residenceAddress: String,
-    val homeAddress: String,
     val doctorFiscalCode: String
-)
+) {
+    fun fullName(): String {
+        return surname.plus(" ").plus(name)
+    }
+
+    fun formattedBirthday(): String {
+        return SimpleDateFormat("dd-MM-yyyy").format(birthdayDate)
+    }
+}

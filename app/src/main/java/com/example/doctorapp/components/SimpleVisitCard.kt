@@ -26,7 +26,7 @@ fun SimpleVisitCard(
 ) {
 
     ElevatedCard(
-        modifier = Modifier.padding(15.dp),
+        modifier = Modifier.padding(16.dp),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),

@@ -19,27 +19,27 @@ fun DoctorDto.toDoctor(): Doctor {
 
 fun DoctorDto.toDoctorEntity(): DoctorEntity {
     return DoctorEntity(
-        id=id,
-        name=name,
-        surname=surname,
-        email=email,
-        fiscalCode=fiscalCode,
-        gender=gender,
-        birthdayDate=birthdayDate,
-        regionalCode=regionalCode,
-        ASL=ASL
+        id = id,
+        name = name,
+        surname = surname,
+        email = email,
+        fiscalCode = fiscalCode,
+        gender = gender,
+        birthdayDate = birthdayDate,
+        regionalCode = regionalCode,
+        ASL = ASL
     )
 }
 
-fun DoctorEntity.toDoctor(): Doctor{
+fun DoctorEntity.toDoctor(): Doctor {
     return Doctor(
-        name=name,
-        surname=surname,
-        email=email,
-        fiscalCode=fiscalCode,
-        gender= gender!!,
-        birthdayDate=birthdayDate!!,
-        regionalCode=regionalCode,
-        ASL=ASL
+        name = name,
+        surname = surname,
+        email = email,
+        fiscalCode = fiscalCode,
+        gender = gender!!,
+        birthdayDate = birthdayDate!!,
+        regionalCode = regionalCode,
+        ASL = ASL
     )
 }

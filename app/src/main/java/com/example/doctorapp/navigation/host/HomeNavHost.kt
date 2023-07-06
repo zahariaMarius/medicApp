@@ -9,12 +9,12 @@ import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.navigation.screen.HomeScreen
 import com.example.doctorapp.presentation.home.HomeScreen
 import com.example.doctorapp.presentation.home.book_visit.BookVisitScreen
-import com.example.doctorapp.presentation.home.request_prescription.RequestPrescriptionScreen
-import com.example.doctorapp.presentation.home.visit.VisitScreen
+import com.example.doctorapp.presentation.home.profile.ProfileScreen
 
 @Composable
 fun HomeNavHost(
     modifier: Modifier,
+    rootNavHostController: NavHostController,
     navHostController: NavHostController,
     startDestination: String
 ) {
@@ -27,7 +27,7 @@ fun HomeNavHost(
         composable(
             route = HomeScreen.Home.route
         ) {
-            VisitScreen()
+            HomeScreen()
         }
         composable(
             route = HomeScreen.BookVisit.route
@@ -35,10 +35,11 @@ fun HomeNavHost(
             BookVisitScreen()
         }
         composable(
-            route = HomeScreen.RequestPrescription.route
+            route = HomeScreen.Profile.route
         ) {
-            RequestPrescriptionScreen()
+            ProfileScreen()
         }
+
     }
 
 }

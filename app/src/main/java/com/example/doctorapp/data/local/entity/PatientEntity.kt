@@ -19,7 +19,5 @@ data class PatientEntity(
     val fiscalCode: String,
     val gender: Gender,
     val birthdayDate: Date? = null,
-    val residenceAddress: String,
-    val homeAddress: String,
     val doctorFiscalCode: String
 )

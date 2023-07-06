@@ -11,12 +11,18 @@ import com.example.doctorapp.data.local.entity.DoctorEntity
 interface DoctorDao {
 
     @Insert
-    fun insertAll(vararg doctor: DoctorEntity)
+    fun insert(doctor: DoctorEntity)
 
     @Delete
     fun delete(doctor: DoctorEntity)
 
+    @Query("DELETE FROM doctorentity")
+    fun clearAll()
+
     @Query("SELECT * FROM doctorentity")
     fun getAll(): List<DoctorEntity>
+
+    @Query("SELECT * FROM doctorentity WHERE fiscalCode = :fiscalCode")
+    fun getDoctorByFiscalCode(fiscalCode: String): DoctorEntity?
 
 }

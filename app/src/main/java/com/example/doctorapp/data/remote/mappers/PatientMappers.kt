@@ -7,28 +7,25 @@ import java.lang.Integer.parseInt
 
 fun PatientDto.toPatientEntity(): PatientEntity {
     return PatientEntity(
-        id=id,
-        name=name,
-        surname=surname,
-        email=email,
-        fiscalCode=fiscalCode,
-        gender=gender,
-        birthdayDate=birthdayDate,
-        residenceAddress= residenceAddress.toString(),
-        homeAddress=homeAddress.toString(),
-        doctorFiscalCode= doctorFiscalCode
+        id = id,
+        name = name,
+        surname = surname,
+        email = email,
+        fiscalCode = fiscalCode,
+        gender = gender,
+        birthdayDate = birthdayDate,
+        doctorFiscalCode = doctorFiscalCode
     )
 }
-fun PatientEntity.toPatient(): Patient{
+
+fun PatientEntity.toPatient(): Patient {
     return Patient(
-        name= name,
-        surname= surname,
-        email= email,
-        fiscalCode= fiscalCode,
-        gender= gender,
-        birthdayDate= birthdayDate!!,
-        residenceAddress= residenceAddress,
-        homeAddress= homeAddress,
-        doctorFiscalCode= doctorFiscalCode
+        name = name,
+        surname = surname,
+        email = email,
+        fiscalCode = fiscalCode,
+        gender = gender,
+        birthdayDate = birthdayDate!!,
+        doctorFiscalCode = doctorFiscalCode
     )
 }

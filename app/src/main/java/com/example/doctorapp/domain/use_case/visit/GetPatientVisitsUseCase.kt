@@ -4,12 +4,11 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import com.example.doctorapp.data.local.database.VisitDatabase
-import com.example.doctorapp.data.local.entity.VisitEntity
 import com.example.doctorapp.data.remote.mediators.VisitRemoteMediator
 import com.example.doctorapp.domain.repository.VisitRepository
 import javax.inject.Inject
 
-class GetVisitsUseCase @Inject constructor(
+class GetPatientVisitsUseCase @Inject constructor(
     private val visitDatabase: VisitDatabase,
     private val visitRepository: VisitRepository
 ) {

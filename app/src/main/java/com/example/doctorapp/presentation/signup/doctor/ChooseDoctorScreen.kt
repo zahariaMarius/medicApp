@@ -3,21 +3,25 @@ package com.example.doctorapp.presentation.signup.doctor
 
 import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowCircleRight
 import androidx.compose.material.icons.filled.ArrowRight
 import androidx.compose.material.icons.outlined.ArrowRight
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,32 +43,42 @@ import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemContentType
 import androidx.paging.compose.itemKey
+import com.example.doctorapp.presentation.signup.SignUpScreenViewModel
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.ui.text.font.FontWeight
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ChooseDoctorScreen(
-    viewModel: ChooseDoctorScreenViewModel = hiltViewModel()
+    viewModel: SignUpScreenViewModel,
+    onContinueClick: () -> Unit
 ) {
 
     val doctors = viewModel.doctorPager.collectAsLazyPagingItems()
 
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "Choose your doctor",
-            style = MaterialTheme.typography.headlineLarge
-        )
-
-        TextField(
-            value = viewModel.search,
-            onValueChange = {
-                viewModel.search = it
-            }
-        )
+    Column(
+        modifier = Modifier.fillMaxHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(32.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = "Choose your doctor",
+                style = MaterialTheme.typography.headlineLarge
+            )
+        }
 
         when (val state = doctors.loadState.refresh) {
             LoadState.Loading -> {
                 Log.d("DOC", "sono in loading")
-                //TODO implement loading state
+                Column(
+                    modifier = Modifier.fillMaxHeight(),
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    CircularProgressIndicator()
+                }
             }
 
             is LoadState.Error -> {
@@ -74,25 +88,33 @@ fun ChooseDoctorScreen(
 
             else -> {
                 Log.d("DOC", "sono in column")
-                LazyColumn(modifier = Modifier) {
+                LazyColumn(
+                    modifier = Modifier
+                ) {
                     items(
                         count = doctors.itemCount,
                         key = doctors.itemKey(),
                         contentType = doctors.itemContentType()
                     ) { index ->
-                        val checkedState = remember { mutableStateOf(false) }
                         val doctor = doctors[index]
                         doctor?.let {
                             ListItem(
                                 headlineContent = {
-                                    Text("Dott. ${doctor.fullName()}")
+                                    Text(text = "Dott. ${doctor.fullName()}")
                                 },
                                 supportingContent = { Text(text = doctor.ASL) },
                                 trailingContent = {
-                                    TextButton(onClick = { /*TODO*/ }) {
-                                        Text(text = "View profile")
+                                    TextButton(
+                                        onClick = {
+                                            viewModel.doctor = doctor
+                                            onContinueClick()
+                                        }) {
+                                        Text(text = "Choose doctor")
                                         Spacer(modifier = Modifier.padding(4.dp))
-                                        Icon(imageVector = Icons.Default.ArrowCircleRight, contentDescription = "View doctor profile")
+                                        Icon(
+                                            imageVector = Icons.Default.ArrowCircleRight,
+                                            contentDescription = "Choose doctor"
+                                        )
                                     }
                                 }
                             )

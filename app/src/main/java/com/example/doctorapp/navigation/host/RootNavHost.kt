@@ -2,6 +2,7 @@ package com.example.doctorapp.navigation.host
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,12 +11,15 @@ import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.presentation.home.HomeScreenContent
 import com.example.doctorapp.presentation.signin.SignInScreenContent
 import com.example.doctorapp.presentation.signup.SignUpScreenContent
+import com.example.doctorapp.presentation.signup.SignUpScreenViewModel
+import com.example.doctorapp.session.SessionManager
 
 @Composable
 fun RootNavHost(
     modifier: Modifier = Modifier,
     navHostController: NavHostController = rememberNavController(),
-    startDestination: String
+    startDestination: String,
+    sessionManager: SessionManager
 ) {
     NavHost(
         modifier = modifier,
@@ -34,13 +38,17 @@ fun RootNavHost(
             route = Graph.SIGNUP
         ) {
             SignUpScreenContent(
-                rootNavHostController = navHostController
+                rootNavHostController = navHostController,
+                viewModel = hiltViewModel<SignUpScreenViewModel>()
             )
         }
         composable(
             route = Graph.HOME
         ) {
-            HomeScreenContent()
+            HomeScreenContent(
+                rootNavHostController = navHostController,
+                sessionManager = sessionManager
+            )
         }
     }
 }

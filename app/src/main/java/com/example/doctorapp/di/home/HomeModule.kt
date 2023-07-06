@@ -1,5 +1,6 @@
 package com.example.doctorapp.di.home
 
+import com.example.doctorapp.common.VisitRetrofit
 import com.example.doctorapp.data.remote.api.VisitApi
 import dagger.Module
 import dagger.Provides
@@ -14,7 +15,7 @@ object HomeModule {
 
     @Provides
     @ViewModelScoped
-    fun provideVisitApi(retrofit: Retrofit): VisitApi {
+    fun provideVisitApi(@VisitRetrofit retrofit: Retrofit): VisitApi {
         return retrofit.create(VisitApi::class.java)
     }
 }

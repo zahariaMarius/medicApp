@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowRight
 import androidx.compose.material.icons.filled.BookOnline
 import androidx.compose.material.icons.filled.Home
@@ -45,20 +46,10 @@ fun SimpleModalNavigationDrawer(
             onClick = { navHostController.navigate(HomeScreen.BookVisit.route) }
         ),
         NavigationDrawerItemInfo(
-            name = HomeScreen.RequestPrescription.name,
-            icon = Icons.Filled.RequestPage,
-            onClick = { navHostController.navigate(HomeScreen.RequestPrescription.route) }
-        ),
-        NavigationDrawerItemInfo(
-            name = HomeScreen.RequestCertificate.name,
-            icon = Icons.Filled.RequestPage,
-            onClick = { navHostController.navigate(HomeScreen.RequestCertificate.route) }
-        ),
-        NavigationDrawerItemInfo(
-            name = HomeScreen.DetectBiomedicalData.name,
-            icon = Icons.Filled.Medication,
-            onClick = { navHostController.navigate(HomeScreen.DetectBiomedicalData.route) }
-        ),
+            name = HomeScreen.Profile.name,
+            icon = Icons.Filled.AccountCircle,
+            onClick = { navHostController.navigate(HomeScreen.Profile.route) }
+        )
     )
 
     val scope = rememberCoroutineScope()

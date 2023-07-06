@@ -1,5 +1,7 @@
 package com.example.doctorapp.di.auth
 
+import com.example.doctorapp.common.AuthRetrofit
+import com.example.doctorapp.common.DoctorRetrofit
 import com.example.doctorapp.data.remote.api.AuthApi
 import com.example.doctorapp.data.remote.api.DoctorApi
 import dagger.Module
@@ -15,13 +17,13 @@ object AuthModule {
 
     @Provides
     @ViewModelScoped
-    fun provideAuthApi(retrofit: Retrofit): AuthApi {
+    fun provideAuthApi(@AuthRetrofit retrofit: Retrofit): AuthApi {
         return retrofit.create(AuthApi::class.java)
     }
 
     @Provides
     @ViewModelScoped
-    fun provideDoctorApi(retrofit: Retrofit): DoctorApi {
+    fun provideDoctorApi(@DoctorRetrofit retrofit: Retrofit): DoctorApi {
         return retrofit.create(DoctorApi::class.java)
     }
 }

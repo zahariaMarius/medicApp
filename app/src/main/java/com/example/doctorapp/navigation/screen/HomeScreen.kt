@@ -15,4 +15,8 @@ sealed class HomeScreen(val route: String, val name: String) {
 
     object DetectBiomedicalData :
         HomeScreen(route = "DETECT_BIOMEDICAL_DATA", name = "Detect biomedical data")
+
+    object Profile:
+            HomeScreen(route = "PROFILE", name = "Profile")
+
 }

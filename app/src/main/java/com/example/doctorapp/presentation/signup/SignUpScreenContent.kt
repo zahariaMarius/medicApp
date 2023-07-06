@@ -13,6 +13,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
@@ -24,7 +25,8 @@ import com.example.doctorapp.navigation.screen.SignUpScreen
 @Composable
 fun SignUpScreenContent(
     rootNavHostController: NavHostController,
-    navHostController: NavHostController = rememberNavController()
+    navHostController: NavHostController = rememberNavController(),
+    viewModel: SignUpScreenViewModel
 ) {
     val navBackStackEntry by navHostController.currentBackStackEntryAsState()
 
@@ -53,7 +55,8 @@ fun SignUpScreenContent(
             modifier = Modifier.padding(contentPadding),
             rootNavHostController = rootNavHostController,
             navHostController = navHostController,
-            startDestination = SignUpScreen.SignUp.route
+            startDestination = SignUpScreen.SignUp.route,
+            viewModel = viewModel
         )
     }
 }

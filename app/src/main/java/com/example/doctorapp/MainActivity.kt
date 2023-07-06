@@ -10,11 +10,15 @@ import androidx.compose.ui.Modifier
 import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.navigation.host.RootNavHost
 import com.example.doctorapp.presentation.signin.SignInScreen
+import com.example.doctorapp.session.SessionManager
 import com.example.doctorapp.ui.theme.DoctorAppTheme
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @Inject
+    lateinit var sessionManager: SessionManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -24,7 +28,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     RootNavHost(
-                        startDestination = Graph.HOME,
+                        startDestination = if (sessionManager.isLogged()) Graph.HOME else Graph.AUTH,
+                        sessionManager = sessionManager
                     )
                 }
             }

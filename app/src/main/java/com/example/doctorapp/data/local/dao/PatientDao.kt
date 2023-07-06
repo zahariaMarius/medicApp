@@ -24,7 +24,10 @@ interface PatientDao {
     @Delete
     fun delete(patient: PatientEntity)
 
+    @Query("SELECT * FROM patiententity WHERE fiscalCode = :fiscalCode")
+    fun getByFiscalCode(fiscalCode: String): PatientEntity
+
     @Query("SELECT * FROM patiententity WHERE email = :email")
-    fun get(email: String): PatientEntity
+    fun getByEmail(email: String): PatientEntity
 
 }

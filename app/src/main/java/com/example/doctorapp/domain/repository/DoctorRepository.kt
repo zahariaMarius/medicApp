@@ -13,6 +13,4 @@ interface DoctorRepository {
         doctorRequestDto: DoctorRequestDto
     ): RemoteResponseDto<DoctorDto>
 
-    fun getDoc(): Flow<PagingData<Doctor>>
-
 }

@@ -1,11 +1,13 @@
 package com.example.doctorapp.data.repository
 
 import android.util.Log
+import androidx.compose.ui.unit.Constraints
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
+import com.example.doctorapp.common.Constants
 import com.example.doctorapp.data.remote.api.DoctorApi
 import com.example.doctorapp.data.remote.dto.DoctorDto
 import com.example.doctorapp.data.remote.dto.request.DoctorRequestDto
@@ -23,10 +25,8 @@ class DoctorRepositoryImpl @Inject constructor(
     override suspend fun getDoctors(
         doctorRequestDto: DoctorRequestDto
     ): RemoteResponseDto<DoctorDto> {
-        return doctorApi.getDoctor(doctorRequestDto)
-    }
-
-    override fun getDoc(): Flow<PagingData<Doctor>> {
-        TODO("Not yet implemented")
+        return doctorApi.getDoctor(
+            doctorRequestDto = doctorRequestDto
+        )
     }
 }
