@@ -1,0 +1,2 @@
+07-09 00:03:12.258 18418 18443 I TestRunner: started: insertDoctor(com.example.doctorapp.data.local.DoctorDaoTest)
+07-09 00:03:12.351 18418 18443 I TestRunner: finished: insertDoctor(com.example.doctorapp.data.local.DoctorDaoTest)

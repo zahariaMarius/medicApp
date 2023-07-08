@@ -10,7 +10,8 @@ import com.example.doctorapp.data.local.entity.VisitEntity
 
 @Database(
     entities = [VisitEntity::class, RemoteKeyEntity::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class VisitDatabase : RoomDatabase() {
     abstract val visitDao: VisitDao

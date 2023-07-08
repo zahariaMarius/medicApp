@@ -7,7 +7,8 @@ import com.example.doctorapp.data.local.entity.DoctorEntity
 
 @Database(
     entities = [DoctorEntity::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class DoctorDatabase: RoomDatabase() {
     abstract val dao: DoctorDao

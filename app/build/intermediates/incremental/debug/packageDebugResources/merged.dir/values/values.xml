@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_medicapp_background">#FFFFFF</color>
+    <string name="app_name">DoctorApp</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_password">Not a valid password</string>
+    <style name="Theme.DoctorApp" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>
