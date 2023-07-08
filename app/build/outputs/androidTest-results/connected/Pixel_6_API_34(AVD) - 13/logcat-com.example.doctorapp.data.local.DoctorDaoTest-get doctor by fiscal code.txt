@@ -1,0 +1,2 @@
+07-09 00:37:38.869 21434 21459 I TestRunner: started: get doctor by fiscal code(com.example.doctorapp.data.local.DoctorDaoTest)
+07-09 00:37:38.951 21434 21459 I TestRunner: finished: get doctor by fiscal code(com.example.doctorapp.data.local.DoctorDaoTest)

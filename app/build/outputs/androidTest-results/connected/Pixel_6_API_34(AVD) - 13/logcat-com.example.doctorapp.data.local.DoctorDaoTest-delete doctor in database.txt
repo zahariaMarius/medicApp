@@ -1,0 +1,2 @@
+07-09 00:37:38.977 21434 21459 I TestRunner: started: delete doctor in database(com.example.doctorapp.data.local.DoctorDaoTest)
+07-09 00:37:38.994 21434 21459 I TestRunner: finished: delete doctor in database(com.example.doctorapp.data.local.DoctorDaoTest)

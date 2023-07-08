@@ -1,4 +1,4 @@
-#Sun Jul 09 00:02:17 CEST 2023
+#Sun Jul 09 00:37:26 CEST 2023
 base.0=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
 base.1=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
 base.2=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/2/classes.dex

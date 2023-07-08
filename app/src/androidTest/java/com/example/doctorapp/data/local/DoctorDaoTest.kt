@@ -41,7 +41,7 @@ class DoctorDaoTest {
     }
 
     @Test
-    fun insertDoctor() = runTest {// optimize coroutine handle
+    fun `insert doctor in database`() = runTest {// optimize coroutine handle
 
         val doctor = DoctorEntity(
             id = "1",
@@ -58,6 +58,85 @@ class DoctorDaoTest {
 
         val allDoctors = database.dao.getAll()
         assertThat(allDoctors).contains(doctor)
+    }
+
+    @Test
+    fun `delete doctor in database`() = runTest {// optimize coroutine handle
+        val doctor1 = DoctorEntity(
+            id = "1",
+            name = "Maria",
+            surname = "Bianchi",
+            email = "maria.bianchi@email.com",
+            gender = Gender.FEMALE,
+            fiscalCode = "JHVFJBDJVG77",
+            birthdayDate = Date(7,2,1986),
+            regionalCode = "Piemonte",
+            ASL = "ASL2"
+        )
+
+        database.dao.insert(doctor1)
+
+        database.dao.delete(doctor1)
+
+        val allDoctors = database.dao.getAll()
+        assertThat(allDoctors).doesNotContain(doctor1)
+    }
+
+    @Test
+    fun `delete all doctors in database`() = runTest {// optimize coroutine handle
+        val doctor = DoctorEntity(
+            id = "1",
+            name = "Mario",
+            surname = "Rossi",
+            email = "mario.rossi@email.com",
+            gender = Gender.MALE,
+            fiscalCode = "JHVFDBSDJVG77",
+            birthdayDate = Date(8,3,1987),
+            regionalCode = "Calabria",
+            ASL = "ASL1"
+        )
+
+        val doctor1 = DoctorEntity(
+            id = "2",
+            name = "Maria",
+            surname = "Bianchi",
+            email = "maria.bianchi@email.com",
+            gender = Gender.FEMALE,
+            fiscalCode = "JHVFJBDJVG77",
+            birthdayDate = Date(7,2,1986),
+            regionalCode = "Piemonte",
+            ASL = "ASL2"
+        )
+
+        database.dao.insert(doctor)
+        database.dao.insert(doctor1)
+
+        database.dao.clearAll()
+
+        val allDoctors = database.dao.getAll()
+        assertThat(allDoctors).isEmpty()
+    }
+
+    @Test
+    fun `get doctor by fiscal code` () = runTest {
+        val fiscalCode = "JHVFDBSDJVG77"
+
+        val doctor = DoctorEntity(
+            id = "1",
+            name = "Mario",
+            surname = "Rossi",
+            email = "mario.rossi@email.com",
+            gender = Gender.MALE,
+            fiscalCode = "JHVFDBSDJVG77",
+            birthdayDate = Date(8,3,1987),
+            regionalCode = "Calabria",
+            ASL = "ASL1"
+        )
+        database.dao.insert(doctor)
+
+        val doctorTestFromDB = database.dao.getDoctorByFiscalCode(fiscalCode)
+
+        assertThat(doctorTestFromDB).isEqualTo(doctor)
     }
 
 }

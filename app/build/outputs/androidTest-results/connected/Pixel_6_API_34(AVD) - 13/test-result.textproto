@@ -1,20 +1,20 @@
-# 2023-07-08T22:03:14.902Z:
+# 2023-07-08T22:37:42.133Z:
 test_suite_meta_data {
-  scheduled_test_case_count: 1
+  scheduled_test_case_count: 4
 }
 test_status: PASSED
 test_result {
   test_case {
     test_class: "DoctorDaoTest"
     test_package: "com.example.doctorapp.data.local"
-    test_method: "insertDoctor"
+    test_method: "get doctor by fiscal code"
     start_time {
-      seconds: 1688853794
-      nanos: 517000000
+      seconds: 1688855861
+      nanos: 698000000
     }
     end_time {
-      seconds: 1688853794
-      nanos: 599000000
+      seconds: 1688855861
+      nanos: 753000000
     }
   }
   test_status: PASSED
@@ -24,7 +24,154 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/logcat-com.example.doctorapp.data.local.DoctorDaoTest-insertDoctor.txt"
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/logcat-com.example.doctorapp.data.local.DoctorDaoTest-get doctor by fiscal code.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DoctorDaoTest"
+    test_package: "com.example.doctorapp.data.local"
+    test_method: "insert doctor in database"
+    start_time {
+      seconds: 1688855861
+      nanos: 771000000
+    }
+    end_time {
+      seconds: 1688855861
+      nanos: 772000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/logcat-com.example.doctorapp.data.local.DoctorDaoTest-insert doctor in database.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DoctorDaoTest"
+    test_package: "com.example.doctorapp.data.local"
+    test_method: "delete all doctors in database"
+    start_time {
+      seconds: 1688855861
+      nanos: 774000000
+    }
+    end_time {
+      seconds: 1688855861
+      nanos: 775000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DoctorDaoTest"
+    test_package: "com.example.doctorapp.data.local"
+    test_method: "delete doctor in database"
+    start_time {
+      seconds: 1688855861
+      nanos: 777000000
+    }
+    end_time {
+      seconds: 1688855861
+      nanos: 803000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/outputs/androidTest-results/connected/Pixel_6_API_34(AVD) - 13/logcat-com.example.doctorapp.data.local.DoctorDaoTest-delete doctor in database.txt"
     }
   }
   output_artifact {
