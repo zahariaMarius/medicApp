@@ -1,7 +1,5 @@
 package com.example.doctorapp.common;
 
-import javax.inject.Qualifier;
-
 @javax.inject.Qualifier
 @kotlin.annotation.Retention(value = kotlin.annotation.AnnotationRetention.BINARY)
 @java.lang.annotation.Retention(value = java.lang.annotation.RetentionPolicy.CLASS)

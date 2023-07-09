@@ -17,7 +17,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class AuthRepositoryImpl_Factory implements Factory<AuthRepositoryImpl> {
   private final Provider<AuthApi> apiProvider;

@@ -1,6 +1,7 @@
 package com.example.doctorapp.data.local
 
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -10,29 +11,44 @@ import com.example.doctorapp.data.local.database.DoctorDatabase
 import com.example.doctorapp.data.local.entity.DoctorEntity
 import com.example.doctorapp.domain.model.Gender
 import com.google.common.truth.Truth.assertThat
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.Date
+import javax.inject.Inject
+import javax.inject.Named
 
 @ExperimentalCoroutinesApi
-@RunWith(AndroidJUnit4::class) // Not working in JVM, only in Emulator
+//@RunWith(AndroidJUnit4::class) // Not working in JVM, only in Emulator
 @SmallTest // Unit test (Medium is Integration test)
+@HiltAndroidTest
 class DoctorDaoTest {
 
-    private lateinit var database: DoctorDatabase
+    @get:Rule
+    var hiltRule = HiltAndroidRule(this)
+
+    @get:Rule
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    @Inject
+    @Named("test_doctor_db")
+    lateinit var database: DoctorDatabase
     private lateinit var dao: DoctorDao
 
     @Before
     fun setup(){
-        // it's in RAM, fake db, not in persistent storage
-        database = Room.inMemoryDatabaseBuilder(
-            ApplicationProvider.getApplicationContext(),
-            DoctorDatabase::class.java
-        ).allowMainThreadQueries().build() // for multiple access to same database
+//        it's in RAM, fake db, not in persistent storage
+//        database = Room.inMemoryDatabaseBuilder(
+//            ApplicationProvider.getApplicationContext(),
+//            DoctorDatabase::class.java
+//        ).allowMainThreadQueries().build() // for multiple access to same database
+        hiltRule.inject()
     }
 
     @After

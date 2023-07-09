@@ -16,7 +16,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class MainActivity_MembersInjector implements MembersInjector<MainActivity> {
   private final Provider<SessionManager> sessionManagerProvider;

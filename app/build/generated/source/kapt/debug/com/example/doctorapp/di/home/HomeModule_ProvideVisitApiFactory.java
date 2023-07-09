@@ -19,7 +19,9 @@ import retrofit2.Retrofit;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class HomeModule_ProvideVisitApiFactory implements Factory<VisitApi> {
   private final Provider<Retrofit> retrofitProvider;

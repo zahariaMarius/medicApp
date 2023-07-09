@@ -17,7 +17,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class GetPatientProfileUseCase_Factory implements Factory<GetPatientProfileUseCase> {
   private final Provider<PatientDatabase> patientDatabaseProvider;

@@ -16,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.doctorapp.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary true
         }
@@ -88,9 +88,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
 
     //Dagger-Hilt
-    implementation 'com.google.dagger:hilt-android:2.44.2'
+    implementation 'com.google.dagger:hilt-android:2.46.1'
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
-    kapt "com.google.dagger:hilt-compiler:2.44.2"
+    kapt "com.google.dagger:hilt-compiler:2.46.1"
 
     //Paging
     implementation "androidx.paging:paging-runtime:$paging_version"
@@ -128,6 +128,8 @@ dependencies {
 
 }
 
+
 kapt {
-    correctErrorTypes true
+    // Remove the line below or comment it out
+    // correctErrorTypes true
 }

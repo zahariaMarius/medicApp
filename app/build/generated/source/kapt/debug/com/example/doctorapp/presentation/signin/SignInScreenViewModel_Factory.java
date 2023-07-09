@@ -18,7 +18,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class SignInScreenViewModel_Factory implements Factory<SignInScreenViewModel> {
   private final Provider<SignInUseCase> signInUseCaseProvider;

@@ -17,7 +17,9 @@ import okhttp3.OkHttpClient;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class AppModule_ProvideOkHttpClientFactory implements Factory<OkHttpClient> {
   @Override

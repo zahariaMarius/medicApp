@@ -229,7 +229,7 @@ public final class PatientDao_Impl implements PatientDao {
   }
 
   @Override
-  public Object insert(final PatientEntity patient, final Continuation<? super Unit> arg1) {
+  public Object insert(final PatientEntity patient, final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -242,7 +242,7 @@ public final class PatientDao_Impl implements PatientDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override
@@ -258,7 +258,7 @@ public final class PatientDao_Impl implements PatientDao {
   }
 
   @Override
-  public Object clearAll(final Continuation<? super Unit> arg0) {
+  public Object clearAll(final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -273,11 +273,12 @@ public final class PatientDao_Impl implements PatientDao {
           __preparedStmtOfClearAll.release(_stmt);
         }
       }
-    }, arg0);
+    }, $completion);
   }
 
   @Override
-  public Object upsertAll(final PatientEntity patient, final Continuation<? super Unit> arg1) {
+  public Object upsertAll(final PatientEntity patient,
+      final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -290,7 +291,7 @@ public final class PatientDao_Impl implements PatientDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override

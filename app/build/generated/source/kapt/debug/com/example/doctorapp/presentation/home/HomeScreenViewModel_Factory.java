@@ -17,7 +17,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class HomeScreenViewModel_Factory implements Factory<HomeScreenViewModel> {
   private final Provider<GetPatientVisitsUseCase> getPatientVisitsUseCaseProvider;

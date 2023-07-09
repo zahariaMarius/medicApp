@@ -17,7 +17,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class SignUpUseCase_Factory implements Factory<SignUpUseCase> {
   private final Provider<AuthRepository> authRepositoryProvider;

@@ -72,7 +72,7 @@ public final class RemoteKeyDao_Impl implements RemoteKeyDao {
 
   @Override
   public Object insertOrReplace(final List<RemoteKeyEntity> remoteKey,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -85,11 +85,11 @@ public final class RemoteKeyDao_Impl implements RemoteKeyDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override
-  public Object clearAll(final Continuation<? super Unit> arg0) {
+  public Object clearAll(final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -104,12 +104,12 @@ public final class RemoteKeyDao_Impl implements RemoteKeyDao {
           __preparedStmtOfClearAll.release(_stmt);
         }
       }
-    }, arg0);
+    }, $completion);
   }
 
   @Override
   public Object remoteKeyByQuery(final String id,
-      final Continuation<? super RemoteKeyEntity> arg1) {
+      final Continuation<? super RemoteKeyEntity> $completion) {
     final String _sql = "SELECT * FROM remotekeyentity WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -157,7 +157,7 @@ public final class RemoteKeyDao_Impl implements RemoteKeyDao {
           _statement.release();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   public static List<Class<?>> getRequiredConverters() {

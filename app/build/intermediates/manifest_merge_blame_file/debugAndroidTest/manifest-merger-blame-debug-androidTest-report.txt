@@ -3,24 +3,24 @@
 3    package="com.example.doctorapp.test" >
 4
 5    <uses-sdk
-5-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:5:5-74
+5-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:5:5-74
 6        android:minSdkVersion="33"
-6-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:5:15-41
+6-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:5:42-71
+7-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:11:5-15:71
-10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:11:22-76
+9-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:11:5-15:71
+10        android:name="com.example.doctorapp.HiltTestRunner"
+10-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:11:22-73
 11        android:functionalTest="false"
-11-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:14:22-52
+11-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:13:22-53
+12-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:13:22-53
 13        android:label="Tests for com.example.doctorapp"
-13-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:15:22-69
+13-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:15:22-69
 14        android:targetPackage="com.example.doctorapp" />
-14-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:12:22-67
+14-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:12:22-67
 15
 16    <queries>
 16-->[androidx.test:runner:1.5.2] /root/.gradle/caches/transforms-3/69eed3667548c865eb40ed85680c842d/transformed/runner-1.5.2/AndroidManifest.xml:24:5-28:15
@@ -36,12 +36,12 @@
 20    </queries>
 21
 22    <application
-22-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:7:5-9:19
+22-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:7:5-9:19
 23        android:debuggable="true"
 24        android:extractNativeLibs="false" >
 25        <uses-library android:name="android.test.runner" />
-25-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:8:9-60
-25-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12927069655645561415.xml:8:23-57
+25-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:8:9-60
+25-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14163504457011193937.xml:8:23-57
 26    </application>
 27
 28</manifest>

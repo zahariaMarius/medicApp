@@ -10,7 +10,7 @@ MERGED from [androidx.navigation:navigation-compose:2.5.3] /root/.gradle/caches/
 MERGED from [androidx.compose.material3:material3-window-size-class:1.1.0] /root/.gradle/caches/transforms-3/b9705f67d8cefa650cd05e66b0b371a8/transformed/material3-window-size-class-1.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.material3:material3:1.1.0] /root/.gradle/caches/transforms-3/c75a99d775c1d7b1873021059156e114/transformed/material3-1.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /root/.gradle/caches/transforms-3/b3bc2535aec5f2b2e202b8ec50bdf820/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.dagger:hilt-android:2.44.2] /root/.gradle/caches/transforms-3/57151d6e7f5e953e271760727afba634/transformed/hilt-android-2.44.2/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.dagger:hilt-android:2.46.1] /root/.gradle/caches/transforms-3/cbc8ebb9473fc3146865b3d593475c1f/transformed/hilt-android-2.46.1/AndroidManifest.xml:16:1-19:12
 MERGED from [com.airbnb.android:lottie:4.2.0] /root/.gradle/caches/transforms-3/2d9ba0c112792c6fb4d4875d4ebf6d4b/transformed/lottie-4.2.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] /root/.gradle/caches/transforms-3/35bb236395aa2baff82dc3f7875b98ca/transformed/appcompat-1.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.5.1] /root/.gradle/caches/transforms-3/3728986d6d305a6dcaf6ed0365ba4e34/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
@@ -87,7 +87,7 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /root/.gradle/caches/tran
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /root/.gradle/caches/transforms-3/ba8c56f9fa1ad4d9d28749a5e65dc374/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /root/.gradle/caches/transforms-3/6c506b9d6c676e7c7e2b7ce17105987c/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /root/.gradle/caches/transforms-3/dd00defd0a967ddc7311bf8bea517e8b/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /root/.gradle/caches/transforms-3/316535a3999959dcd47fff10c49561fc/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.46.1] /root/.gradle/caches/transforms-3/8c6e297c365729103a401fcc062553aa/transformed/dagger-lint-aar-2.46.1/AndroidManifest.xml:16:1-19:12
 INJECTED from /home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:2:1-32:12
 INJECTED from /home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:2:1-32:12
 INJECTED from /home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:2:1-32:12
@@ -199,8 +199,8 @@ MERGED from [androidx.compose.material3:material3:1.1.0] /root/.gradle/caches/tr
 MERGED from [androidx.compose.material3:material3:1.1.0] /root/.gradle/caches/transforms-3/c75a99d775c1d7b1873021059156e114/transformed/material3-1.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /root/.gradle/caches/transforms-3/b3bc2535aec5f2b2e202b8ec50bdf820/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /root/.gradle/caches/transforms-3/b3bc2535aec5f2b2e202b8ec50bdf820/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.dagger:hilt-android:2.44.2] /root/.gradle/caches/transforms-3/57151d6e7f5e953e271760727afba634/transformed/hilt-android-2.44.2/AndroidManifest.xml:18:3-42
-MERGED from [com.google.dagger:hilt-android:2.44.2] /root/.gradle/caches/transforms-3/57151d6e7f5e953e271760727afba634/transformed/hilt-android-2.44.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.46.1] /root/.gradle/caches/transforms-3/cbc8ebb9473fc3146865b3d593475c1f/transformed/hilt-android-2.46.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.46.1] /root/.gradle/caches/transforms-3/cbc8ebb9473fc3146865b3d593475c1f/transformed/hilt-android-2.46.1/AndroidManifest.xml:18:3-42
 MERGED from [com.airbnb.android:lottie:4.2.0] /root/.gradle/caches/transforms-3/2d9ba0c112792c6fb4d4875d4ebf6d4b/transformed/lottie-4.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.airbnb.android:lottie:4.2.0] /root/.gradle/caches/transforms-3/2d9ba0c112792c6fb4d4875d4ebf6d4b/transformed/lottie-4.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /root/.gradle/caches/transforms-3/35bb236395aa2baff82dc3f7875b98ca/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
@@ -353,8 +353,8 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] /root/.gradle/caches/transfo
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /root/.gradle/caches/transforms-3/6c506b9d6c676e7c7e2b7ce17105987c/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /root/.gradle/caches/transforms-3/dd00defd0a967ddc7311bf8bea517e8b/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /root/.gradle/caches/transforms-3/dd00defd0a967ddc7311bf8bea517e8b/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /root/.gradle/caches/transforms-3/316535a3999959dcd47fff10c49561fc/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:18:3-42
-MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /root/.gradle/caches/transforms-3/316535a3999959dcd47fff10c49561fc/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.46.1] /root/.gradle/caches/transforms-3/8c6e297c365729103a401fcc062553aa/transformed/dagger-lint-aar-2.46.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.46.1] /root/.gradle/caches/transforms-3/8c6e297c365729103a401fcc062553aa/transformed/dagger-lint-aar-2.46.1/AndroidManifest.xml:18:3-42
 INJECTED from /home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml
 INJECTED from /home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

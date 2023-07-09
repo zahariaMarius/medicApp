@@ -102,7 +102,8 @@ public final class VisitDao_Impl implements VisitDao {
   }
 
   @Override
-  public Object insertAll(final List<VisitEntity> users, final Continuation<? super Unit> arg1) {
+  public Object insertAll(final List<VisitEntity> users,
+      final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -115,11 +116,11 @@ public final class VisitDao_Impl implements VisitDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override
-  public Object clearAll(final Continuation<? super Unit> arg0) {
+  public Object clearAll(final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -134,7 +135,7 @@ public final class VisitDao_Impl implements VisitDao {
           __preparedStmtOfClearAll.release(_stmt);
         }
       }
-    }, arg0);
+    }, $completion);
   }
 
   @Override

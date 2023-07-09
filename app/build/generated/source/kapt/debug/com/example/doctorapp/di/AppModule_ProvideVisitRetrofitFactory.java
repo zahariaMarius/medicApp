@@ -19,7 +19,9 @@ import retrofit2.Retrofit;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class AppModule_ProvideVisitRetrofitFactory implements Factory<Retrofit> {
   private final Provider<OkHttpClient> okHttpClientProvider;

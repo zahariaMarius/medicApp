@@ -19,7 +19,9 @@ import retrofit2.Retrofit;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class AuthModule_ProvideAuthApiFactory implements Factory<AuthApi> {
   private final Provider<Retrofit> retrofitProvider;

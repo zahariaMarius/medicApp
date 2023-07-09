@@ -17,7 +17,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class SessionManager_Factory implements Factory<SessionManager> {
   private final Provider<SharedPreferences> preferencesProvider;

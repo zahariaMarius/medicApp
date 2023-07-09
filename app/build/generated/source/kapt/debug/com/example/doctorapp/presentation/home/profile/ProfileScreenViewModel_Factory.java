@@ -19,7 +19,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class ProfileScreenViewModel_Factory implements Factory<ProfileScreenViewModel> {
   private final Provider<SessionManager> sessionManagerProvider;
