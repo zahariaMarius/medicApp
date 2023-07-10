@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.presentation.home.HomeScreenContent
+import com.example.doctorapp.presentation.onboard.OnboardScreen
 import com.example.doctorapp.presentation.signin.SignInScreenContent
 import com.example.doctorapp.presentation.signup.SignUpScreenContent
 import com.example.doctorapp.presentation.signup.SignUpScreenViewModel
@@ -27,6 +28,14 @@ fun RootNavHost(
         route = Graph.ROOT,
         startDestination = startDestination
     ) {
+        composable(
+            route = Graph.ONBOARD
+        ) {
+            OnboardScreen(
+                rootNavHostController = navHostController,
+                sessionManager = sessionManager
+            )
+        }
         composable(
             route = Graph.AUTH
         ) {

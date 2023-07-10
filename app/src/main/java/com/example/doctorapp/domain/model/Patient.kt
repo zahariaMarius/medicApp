@@ -1,5 +1,6 @@
 package com.example.doctorapp.domain.model
 
+import androidx.compose.ui.text.capitalize
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter

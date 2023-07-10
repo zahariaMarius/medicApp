@@ -6,11 +6,13 @@ import androidx.paging.PagingConfig
 import com.example.doctorapp.data.local.database.VisitDatabase
 import com.example.doctorapp.data.remote.mediators.VisitRemoteMediator
 import com.example.doctorapp.domain.repository.VisitRepository
+import com.example.doctorapp.session.SessionManager
 import javax.inject.Inject
 
 class GetPatientVisitsUseCase @Inject constructor(
     private val visitDatabase: VisitDatabase,
-    private val visitRepository: VisitRepository
+    private val visitRepository: VisitRepository,
+    private val sessionManager: SessionManager
 ) {
 
     @OptIn(ExperimentalPagingApi::class)
@@ -19,7 +21,7 @@ class GetPatientVisitsUseCase @Inject constructor(
         remoteMediator = VisitRemoteMediator(
             visitDatabase = visitDatabase,
             visitRepository = visitRepository,
-            patientFiscalCode = "DMNDMN80A01L219B"
+            patientFiscalCode = sessionManager.getUserFiscalCode()!!
         )
     ) {
         visitDatabase.visitDao.pagingSource()

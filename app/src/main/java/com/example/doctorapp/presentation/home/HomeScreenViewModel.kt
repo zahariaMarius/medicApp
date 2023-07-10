@@ -15,8 +15,6 @@ class HomeScreenViewModel @Inject constructor(
     private val getPatientVisitsUseCase: GetPatientVisitsUseCase
 ): ViewModel() {
 
-    private val patientFiscalCode = "DMNDMN80A01L219B"
-
     val visitPager = getPatientVisitsUseCase.visitPager
         .map {pagingData ->
             pagingData.map { it.toVisit() }

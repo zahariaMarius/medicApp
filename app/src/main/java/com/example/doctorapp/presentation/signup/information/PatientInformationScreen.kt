@@ -24,6 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
@@ -72,7 +73,10 @@ fun PatientInformationScreen(
             OutlinedTextField(
                 value = viewModel.fiscalCode,
                 onValueChange = { viewModel.fiscalCode = it },
-                label = { Text(text = "Fiscal code") }
+                label = { Text(text = "Fiscal code") },
+                keyboardOptions = KeyboardOptions(
+                    capitalization = KeyboardCapitalization.Characters
+                )
             )
 
             ExposedDropdownMenuBox(
@@ -88,8 +92,7 @@ fun PatientInformationScreen(
                     value = viewModel.selectedGender,
                     onValueChange = {},
                     label = { Text("Gender") },
-                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = viewModel.genderMenuIsExpanded) },
-                    colors = ExposedDropdownMenuDefaults.textFieldColors(),
+                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = viewModel.genderMenuIsExpanded) }
                 )
                 ExposedDropdownMenu(
                     expanded = viewModel.genderMenuIsExpanded,
@@ -121,6 +124,7 @@ fun PatientInformationScreen(
             )
 
             Button(onClick = {
+                viewModel.formattedBirthdayDateString()
                 onContinueClick()
             }) {
                 Text(text = "Continue")

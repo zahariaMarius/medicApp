@@ -92,31 +92,31 @@ fun ProfileScreen(
                 ) {
                     SimpleProfilePersonalInfo(
                         headLine = "Email",
-                        supportingText = viewModel.patient.email
+                        supportingText = viewModel.patient.email,
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Fiscal code",
-                        supportingText = viewModel.patient.fiscalCode
+                        supportingText = viewModel.patient.fiscalCode,
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Birthday",
-                        supportingText = viewModel.patient.formattedBirthday()
+                        supportingText = viewModel.patient.formattedBirthday(),
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Gender",
-                        supportingText = viewModel.patient.gender.toString()
+                        supportingText = viewModel.patient.gender.toString(),
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Blood group",
-                        supportingText = "A+"
+                        supportingText = "A+",
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Weight",
-                        supportingText = "68 Kg"
+                        supportingText = "68 Kg",
                     )
                     SimpleProfilePersonalInfo(
                         headLine = "Height",
-                        supportingText = "169 cm"
+                        supportingText = "169 cm",
                     )
                 }
             } else if (viewModel.currentTab == 1) {
@@ -132,31 +132,31 @@ fun ProfileScreen(
 
                         SimpleProfilePersonalInfo(
                             headLine = "Name",
-                            supportingText = viewModel.doctor.fullName()
+                            supportingText = viewModel.doctor.fullName(),
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "Email",
-                            supportingText = viewModel.doctor.email
+                            supportingText = viewModel.doctor.email,
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "Fiscal code",
-                            supportingText = viewModel.doctor.fiscalCode
+                            supportingText = viewModel.doctor.fiscalCode,
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "Birthday",
-                            supportingText = viewModel.doctor.formattedBirthday()
+                            supportingText = viewModel.doctor.formattedBirthday(),
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "Gender",
-                            supportingText = viewModel.doctor.gender.toString()
+                            supportingText = viewModel.doctor.gender.toString(),
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "Regional code",
-                            supportingText = viewModel.doctor.regionalCode
+                            supportingText = viewModel.doctor.regionalCode,
                         )
                         SimpleProfilePersonalInfo(
                             headLine = "ASL",
-                            supportingText = viewModel.doctor.ASL
+                            supportingText = viewModel.doctor.ASL,
                         )
                     }
                 }

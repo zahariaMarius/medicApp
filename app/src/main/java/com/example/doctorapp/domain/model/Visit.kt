@@ -1,5 +1,6 @@
 package com.example.doctorapp.domain.model
 
+import java.text.SimpleDateFormat
 import java.util.Date
 
 data class Visit(
@@ -14,5 +15,9 @@ data class Visit(
 ) {
     fun doctorFullName(): String {
         return doctorSurname.plus(" ").plus(doctorName)
+    }
+
+    fun formattedDate(): String {
+        return SimpleDateFormat("dd-MM-yyyy").format(dateTime)
     }
 }

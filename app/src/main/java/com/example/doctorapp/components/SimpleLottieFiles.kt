@@ -11,7 +11,10 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 
 
 @Composable
-fun SimpleLottieFiles(urlLottieFiles: String){
+fun SimpleLottieFiles(
+    urlLottieFiles: String,
+    iterations: Int
+){
     val composition by rememberLottieComposition(spec = LottieCompositionSpec.Url(urlLottieFiles))
-    LottieAnimation(composition = composition, iterations = LottieConstants.IterateForever)
+    LottieAnimation(composition = composition, iterations = iterations)
 }
