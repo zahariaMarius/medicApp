@@ -17,19 +17,19 @@
 12-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:6:5-79
 12-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.REORDER_TASKS" />
-13-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:24:5-72
-13-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:24:22-69
+13-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:24:5-72
+13-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:24:22-69
 14
 15    <permission
-15-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+15-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
 16        android:name="com.example.doctorapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-16-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+16-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
 17        android:protectionLevel="signature" />
-17-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+17-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
 18
 19    <uses-permission android:name="com.example.doctorapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-19-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
-19-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+19-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
 20
 21    <application
 21-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:8:5-30:19
@@ -38,7 +38,7 @@
 23        android:allowBackup="true"
 23-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:10:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.10.1] /root/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+24-->[androidx.core:core:1.10.1] /home/matteo-miceli/.gradle/caches/transforms-3/bd1e29338f601c7301add6a282599c4a/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
 25-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:12:9-65
 26        android:debuggable="true"
@@ -80,60 +80,60 @@
 45            </intent-filter>
 46        </activity>
 47        <activity
-47-->[androidx.compose.ui:ui-tooling:1.4.1] /root/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:23:9-25:39
+47-->[androidx.compose.ui:ui-tooling:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:23:9-25:39
 48            android:name="androidx.compose.ui.tooling.PreviewActivity"
-48-->[androidx.compose.ui:ui-tooling:1.4.1] /root/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:24:13-71
+48-->[androidx.compose.ui:ui-tooling:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:24:13-71
 49            android:exported="true" />
-49-->[androidx.compose.ui:ui-tooling:1.4.1] /root/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:25:13-36
+49-->[androidx.compose.ui:ui-tooling:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/ffef9ebd82a8ea6653baf7e275902290/transformed/ui-tooling-1.4.1/AndroidManifest.xml:25:13-36
 50        <activity
-50-->[androidx.compose.ui:ui-test-manifest:1.4.1] /root/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:23:9-25:39
+50-->[androidx.compose.ui:ui-test-manifest:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:23:9-25:39
 51            android:name="androidx.activity.ComponentActivity"
-51-->[androidx.compose.ui:ui-test-manifest:1.4.1] /root/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:24:13-63
+51-->[androidx.compose.ui:ui-test-manifest:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:24:13-63
 52            android:exported="true" />
-52-->[androidx.compose.ui:ui-test-manifest:1.4.1] /root/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:25:13-36
+52-->[androidx.compose.ui:ui-test-manifest:1.4.1] /home/matteo-miceli/.gradle/caches/transforms-3/e0f8b7e67dab6cd96b80a4bbed732674/transformed/ui-test-manifest-1.4.1/AndroidManifest.xml:25:13-36
 53        <activity
-53-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:27:9-34:20
+53-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:27:9-34:20
 54            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-54-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:28:13-99
+54-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:28:13-99
 55            android:exported="true"
-55-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:29:13-36
+55-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:29:13-36
 56            android:theme="@style/WhiteBackgroundTheme" >
-56-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:30:13-56
+56-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:30:13-56
 57            <intent-filter android:priority="-100" >
-57-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
-57-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+57-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+57-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
 58                <category android:name="android.intent.category.LAUNCHER" />
 58-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:17-77
 58-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:27-74
 59            </intent-filter>
 60        </activity>
 61        <activity
-61-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:35:9-42:20
+61-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:35:9-42:20
 62            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-62-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:36:13-95
+62-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:36:13-95
 63            android:exported="true"
-63-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:37:13-36
+63-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:37:13-36
 64            android:theme="@style/WhiteBackgroundTheme" >
-64-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:38:13-56
+64-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:38:13-56
 65            <intent-filter android:priority="-100" >
-65-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
-65-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+65-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+65-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
 66                <category android:name="android.intent.category.LAUNCHER" />
 66-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:17-77
 66-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:27-74
 67            </intent-filter>
 68        </activity>
 69        <activity
-69-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:43:9-50:20
+69-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:43:9-50:20
 70            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-70-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:44:13-103
+70-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:44:13-103
 71            android:exported="true"
-71-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:45:13-36
+71-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:45:13-36
 72            android:theme="@style/WhiteBackgroundDialogTheme" >
-72-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:46:13-62
+72-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:46:13-62
 73            <intent-filter android:priority="-100" >
-73-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
-73-->[androidx.test:core:1.5.0] /root/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+73-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+73-->[androidx.test:core:1.5.0] /home/matteo-miceli/.gradle/caches/transforms-3/e8ac918a5f480112d0c8c3e7082070e9/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
 74                <category android:name="android.intent.category.LAUNCHER" />
 74-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:17-77
 74-->/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/src/main/AndroidManifest.xml:27:27-74
@@ -141,90 +141,90 @@
 76        </activity>
 77
 78        <provider
-78-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+78-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 79            android:name="androidx.startup.InitializationProvider"
-79-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+79-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
 80            android:authorities="com.example.doctorapp.androidx-startup"
-80-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+80-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
 81            android:exported="false" >
-81-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+81-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
 82            <meta-data
-82-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+82-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
 83                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-83-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+83-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 84                android:value="androidx.startup" />
-84-->[androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+84-->[androidx.emoji2:emoji2:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/262bedcdb3e32dc488e0474be91731a6/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
 85            <meta-data
-85-->[androidx.lifecycle:lifecycle-process:2.6.1] /root/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+85-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/matteo-miceli/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
 86                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-86-->[androidx.lifecycle:lifecycle-process:2.6.1] /root/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+86-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/matteo-miceli/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
 87                android:value="androidx.startup" />
-87-->[androidx.lifecycle:lifecycle-process:2.6.1] /root/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+87-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/matteo-miceli/.gradle/caches/transforms-3/1a15a4dc129da88d8106f7c9b60af5e1/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
 88            <meta-data
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
 89                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
 90                android:value="androidx.startup" />
-90-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
 91        </provider>
 92
 93        <uses-library
-93-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+93-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
 94            android:name="androidx.window.extensions"
-94-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+94-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
 95            android:required="false" />
-95-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+95-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
 96        <uses-library
-96-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+96-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
 97            android:name="androidx.window.sidecar"
-97-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+97-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
 98            android:required="false" />
-98-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+98-->[androidx.window:window:1.0.0] /home/matteo-miceli/.gradle/caches/transforms-3/27a045e03564cc2440ba010c19f98d54/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
 99
 100        <service
-100-->[androidx.room:room-runtime:2.5.2] /root/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:24:9-28:63
+100-->[androidx.room:room-runtime:2.5.2] /home/matteo-miceli/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:24:9-28:63
 101            android:name="androidx.room.MultiInstanceInvalidationService"
-101-->[androidx.room:room-runtime:2.5.2] /root/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:25:13-74
+101-->[androidx.room:room-runtime:2.5.2] /home/matteo-miceli/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:25:13-74
 102            android:directBootAware="true"
-102-->[androidx.room:room-runtime:2.5.2] /root/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:26:13-43
+102-->[androidx.room:room-runtime:2.5.2] /home/matteo-miceli/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:26:13-43
 103            android:exported="false" />
-103-->[androidx.room:room-runtime:2.5.2] /root/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:27:13-37
+103-->[androidx.room:room-runtime:2.5.2] /home/matteo-miceli/.gradle/caches/transforms-3/4bc7a3095d1096ce08b082431c90aefb/transformed/room-runtime-2.5.2/AndroidManifest.xml:27:13-37
 104
 105        <receiver
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
 106            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 107            android:directBootAware="false"
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
 108            android:enabled="true"
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
 109            android:exported="true"
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
 110            android:permission="android.permission.DUMP" >
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
 111            <intent-filter>
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 112                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 113            </intent-filter>
 114            <intent-filter>
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 115                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 116            </intent-filter>
 117            <intent-filter>
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 118                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 119            </intent-filter>
 120            <intent-filter>
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 121                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] /root/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/matteo-miceli/.gradle/caches/transforms-3/237e4f52ffc7e6901013b227c9711e7a/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
 122            </intent-filter>
 123        </receiver>
 124    </application>
