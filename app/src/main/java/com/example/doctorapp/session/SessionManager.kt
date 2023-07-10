@@ -8,6 +8,13 @@ import javax.inject.Inject
 class SessionManager @Inject constructor(
     private val preferences: SharedPreferences
 ) {
+    fun setFirstAccess() {
+        preferences.edit().putBoolean(Constants.FIRST_ACCESS_KEY, false).apply()
+    }
+
+    fun isFirstAccess(): Boolean {
+        return preferences.getBoolean(Constants.FIRST_ACCESS_KEY, true)
+    }
 
     fun isLogged(): Boolean {
         return !preferences.getString(Constants.LOGGED_USER_KEY, null).isNullOrBlank()
@@ -22,6 +29,6 @@ class SessionManager @Inject constructor(
     }
 
     fun logout() {
-        preferences.edit().clear().apply()
+        preferences.edit().remove(Constants.LOGGED_USER_KEY).apply()
     }
 }

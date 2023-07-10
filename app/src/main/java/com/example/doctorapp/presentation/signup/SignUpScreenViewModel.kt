@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.capitalize
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.doctorapp.common.Resource
@@ -29,6 +30,8 @@ class SignUpScreenViewModel @Inject constructor(
 ) : ViewModel() {
     val TAG: String = "SIGNUP"
 
+    var openDialog by mutableStateOf(false)
+
     // SignUpScreen
     var email by mutableStateOf("")
     var password by mutableStateOf("")
@@ -52,29 +55,24 @@ class SignUpScreenViewModel @Inject constructor(
 
     //SummaryScreen
     var currentTab by mutableStateOf(0)
-    val tabTitles = listOf("Your info", "Selected doctor")
+    val tabTitles = listOf("Your information", "Selected doctor")
 
-    fun signUp(onSuccessCallback: () -> Unit) {
-        Log.d(TAG, "sono in funzione signUp")
-        Log.d(TAG, "DATA --> $birthdayDate")
-        birthdayDate = "15/09/1996"
-        val x = SimpleDateFormat("dd/MM/yyyy", Locale.ITALIAN).parse(birthdayDate)
-        Log.d(TAG, "DATAFORMATTED --> $x")
+    fun signUp() {
 
         val patientRequestDto = PatientRequestDto(
             name = name,
             surname = surname,
             email = email,
             password = password,
-            fiscalCode = fiscalCode,
+            fiscalCode = fiscalCode.uppercase(),
             gender = Gender.valueOf(selectedGender),
-            //birthdayDate = SimpleDateFormat("dd/MMM/yyyy", Locale.ITALIAN).parse(birthdayDate),
+            birthdayDate = parseBirthdayDate(),
             doctorFiscalCode = doctor!!.fiscalCode
         )
-        Log.d(TAG, "DATAPAZIENTE --> ${patientRequestDto.birthdayDate}")
 
+        Log.d(TAG, patientRequestDto.toString())
 
-        /*signUpUseCase(patientRequestDto).onEach { result ->
+        signUpUseCase(patientRequestDto).onEach { result ->
             when (result) {
                 is Resource.Loading -> {
                     Log.d(TAG, "singUp: sono in loading")
@@ -83,7 +81,7 @@ class SignUpScreenViewModel @Inject constructor(
                 is Resource.Success -> {
                     Log.d(TAG, "singUp: sono in success")
                     Log.d(TAG, "singUp: ${result.data}")
-                    onSuccessCallback.invoke()
+                    openDialog = !openDialog
                 }
 
                 is Resource.Error -> {
@@ -91,6 +89,20 @@ class SignUpScreenViewModel @Inject constructor(
                     Log.d(TAG, "singUp: ${result.message}")
                 }
             }
-        }.launchIn(viewModelScope)*/
+        }.launchIn(viewModelScope)
+    }
+
+
+    fun formattedBirthdayDateString() {
+        birthdayDate = birthdayDate
+            .substring(0, 2)
+            .plus("-")
+            .plus(birthdayDate.substring(2, 4))
+            .plus("-")
+            .plus(birthdayDate.substring(4, 8))
+    }
+
+    private fun parseBirthdayDate(): Date? {
+        return SimpleDateFormat("dd-MM-yyyy", Locale.ITALIAN).parse(birthdayDate)
     }
 }

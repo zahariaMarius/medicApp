@@ -12,8 +12,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.outlined.Logout
 import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.DrawerDefaults
 import androidx.compose.material3.DrawerState
@@ -21,6 +23,7 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
@@ -38,6 +41,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -63,6 +67,7 @@ fun HomeScreenContent(
     val navBackStackEntry by navHostController.currentBackStackEntryAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
+    val openDialog = remember { mutableStateOf(false) }
 
     SimpleModalNavigationDrawer(
         drawerState = drawerState,
@@ -82,12 +87,11 @@ fun HomeScreenContent(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(text = "Profile")
-                                    TextButton(onClick = {
-                                        sessionManager.logout()
-                                        rootNavHostController.navigate(Graph.AUTH) {
-                                            rootNavHostController.popBackStack()
+                                    TextButton(
+                                        onClick = {
+                                            openDialog.value = true
                                         }
-                                    }) {
+                                    ) {
                                         Text(text = "Logout")
                                         Icon(Icons.Outlined.Logout, contentDescription = "Logout")
                                     }
@@ -113,6 +117,44 @@ fun HomeScreenContent(
                 rootNavHostController = rootNavHostController,
                 navHostController = navHostController,
                 startDestination = HomeScreen.Home.route
+            )
+        }
+
+        if (openDialog.value) {
+            AlertDialog(
+                onDismissRequest = {},
+                title = {
+                    Text(
+                        text = "Goodbye!",
+                    )
+                },
+                text = {
+                    Text(
+                        "Are you sure you want to log out?"
+                    )
+                },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            openDialog.value = false
+                            sessionManager.logout()
+                            rootNavHostController.navigate(Graph.AUTH) {
+                                rootNavHostController.popBackStack()
+                            }
+                        }
+                    ) {
+                        Text("Confirm")
+                    }
+                },
+                dismissButton = {
+                    TextButton(
+                        onClick = {
+                            openDialog.value = false
+                        }
+                    ) {
+                        Text("Dismiss")
+                    }
+                }
             )
         }
     }

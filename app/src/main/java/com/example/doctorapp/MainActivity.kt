@@ -28,7 +28,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     RootNavHost(
-                        startDestination = if (sessionManager.isLogged()) Graph.HOME else Graph.AUTH,
+                        startDestination =
+                        if (sessionManager.isFirstAccess()) Graph.ONBOARD
+                        else if (sessionManager.isLogged()) Graph.HOME
+                        else Graph.AUTH,
                         sessionManager = sessionManager
                     )
                 }
