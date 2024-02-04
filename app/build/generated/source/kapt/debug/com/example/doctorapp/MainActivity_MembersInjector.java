@@ -1,5 +1,6 @@
 package com.example.doctorapp;
 
+import com.example.doctorapp.session.AuthServiceHelper;
 import com.example.doctorapp.session.SessionManager;
 import dagger.MembersInjector;
 import dagger.internal.DaggerGenerated;
@@ -23,22 +24,34 @@ import javax.inject.Provider;
 public final class MainActivity_MembersInjector implements MembersInjector<MainActivity> {
   private final Provider<SessionManager> sessionManagerProvider;
 
-  public MainActivity_MembersInjector(Provider<SessionManager> sessionManagerProvider) {
+  private final Provider<AuthServiceHelper> authServiceHelperProvider;
+
+  public MainActivity_MembersInjector(Provider<SessionManager> sessionManagerProvider,
+      Provider<AuthServiceHelper> authServiceHelperProvider) {
     this.sessionManagerProvider = sessionManagerProvider;
+    this.authServiceHelperProvider = authServiceHelperProvider;
   }
 
   public static MembersInjector<MainActivity> create(
-      Provider<SessionManager> sessionManagerProvider) {
-    return new MainActivity_MembersInjector(sessionManagerProvider);
+      Provider<SessionManager> sessionManagerProvider,
+      Provider<AuthServiceHelper> authServiceHelperProvider) {
+    return new MainActivity_MembersInjector(sessionManagerProvider, authServiceHelperProvider);
   }
 
   @Override
   public void injectMembers(MainActivity instance) {
     injectSessionManager(instance, sessionManagerProvider.get());
+    injectAuthServiceHelper(instance, authServiceHelperProvider.get());
   }
 
   @InjectedFieldSignature("com.example.doctorapp.MainActivity.sessionManager")
   public static void injectSessionManager(MainActivity instance, SessionManager sessionManager) {
     instance.sessionManager = sessionManager;
+  }
+
+  @InjectedFieldSignature("com.example.doctorapp.MainActivity.authServiceHelper")
+  public static void injectAuthServiceHelper(MainActivity instance,
+      AuthServiceHelper authServiceHelper) {
+    instance.authServiceHelper = authServiceHelper;
   }
 }

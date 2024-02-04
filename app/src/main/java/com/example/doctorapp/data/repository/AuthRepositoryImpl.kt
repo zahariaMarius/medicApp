@@ -19,7 +19,7 @@ class AuthRepositoryImpl @Inject constructor(
         return api.signIn(authRequestDto)
     }
 
-    override suspend fun signUp(patientRequestDto: PatientRequestDto) {
+    override suspend fun signUp(patientRequestDto: PatientRequestDto): RemoteResponseDto<PatientDto> {
         return api.signup(patientRequestDto)
     }
 

@@ -17,13 +17,13 @@ object AuthModule {
 
     @Provides
     @ViewModelScoped
-    fun provideAuthApi(@AuthRetrofit retrofit: Retrofit): AuthApi {
+    fun provideAuthApi(retrofit: Retrofit): AuthApi {
         return retrofit.create(AuthApi::class.java)
     }
 
     @Provides
     @ViewModelScoped
-    fun provideDoctorApi(@DoctorRetrofit retrofit: Retrofit): DoctorApi {
+    fun provideDoctorApi(retrofit: Retrofit): DoctorApi {
         return retrofit.create(DoctorApi::class.java)
     }
 }

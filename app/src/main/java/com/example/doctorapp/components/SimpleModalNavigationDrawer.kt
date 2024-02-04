@@ -41,11 +41,6 @@ fun SimpleModalNavigationDrawer(
             onClick = { navHostController.navigate(HomeScreen.Home.route) }
         ),
         NavigationDrawerItemInfo(
-            name = HomeScreen.BookVisit.name,
-            icon = Icons.Filled.BookOnline,
-            onClick = { navHostController.navigate(HomeScreen.BookVisit.route) }
-        ),
-        NavigationDrawerItemInfo(
             name = HomeScreen.Profile.name,
             icon = Icons.Filled.AccountCircle,
             onClick = { navHostController.navigate(HomeScreen.Profile.route) }

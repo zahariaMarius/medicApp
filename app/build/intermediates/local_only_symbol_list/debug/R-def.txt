@@ -16,3 +16,4 @@ string invalid_password
 style Theme.DoctorApp
 xml backup_rules
 xml data_extraction_rules
+xml network_security_config

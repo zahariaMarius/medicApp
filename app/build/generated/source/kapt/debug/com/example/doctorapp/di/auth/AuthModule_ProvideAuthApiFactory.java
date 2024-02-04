@@ -11,7 +11,7 @@ import javax.inject.Provider;
 import retrofit2.Retrofit;
 
 @ScopeMetadata("dagger.hilt.android.scopes.ViewModelScoped")
-@QualifierMetadata("com.example.doctorapp.common.AuthRetrofit")
+@QualifierMetadata
 @DaggerGenerated
 @Generated(
     value = "dagger.internal.codegen.ComponentProcessor",

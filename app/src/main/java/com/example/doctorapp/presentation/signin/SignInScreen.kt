@@ -1,29 +1,25 @@
 package com.example.doctorapp.presentation.signin
 
+import android.app.Activity.RESULT_OK
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Facebook
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
-import androidx.compose.material.icons.outlined.Facebook
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -41,15 +37,35 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.doctorapp.R
+import com.example.doctorapp.session.AuthServiceHelper
+import kotlin.math.sign
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SignInScreen(
     viewModel: SignInScreenViewModel = hiltViewModel(),
-    onSignUpClick: () -> Unit,
+    authServiceHelper: AuthServiceHelper,
+    goToSignUp: () -> Unit,
     onSignInSuccess: () -> Unit
 ) {
+
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult(),
+        onResult = {
+            if (it.resultCode == RESULT_OK) {
+                authServiceHelper.handleAuthorizationResponse(
+                    intent = it.data!!,
+                    signInWithSocial = {
+                        viewModel.signInWithSocial(
+                            onSuccessCallback = onSignInSuccess,
+                            onFailedCallback = goToSignUp
+                        )
+                    }
+                )
+            }
+        }
+    )
+
     Column(
         modifier = Modifier.fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -63,7 +79,7 @@ fun SignInScreen(
             Image(
                 painter = painterResource(id = R.drawable.medicapp_vector),
                 contentDescription = "",
-                modifier = Modifier.size(200.dp,200.dp)
+                modifier = Modifier.size(200.dp, 200.dp)
             )
             Text(
                 text = "Welcome!",
@@ -71,7 +87,6 @@ fun SignInScreen(
             )
             Text(
                 text = "Signin to continue",
-                //style = MaterialTheme.typography
             )
         }
         Column(
@@ -114,13 +129,21 @@ fun SignInScreen(
             Button(
                 modifier = Modifier,
                 onClick = {
-                    viewModel.signIn(onSuccessCallback = onSignInSuccess)
+                    viewModel.signInWithCredential {
+                        onSignInSuccess()
+                    }
                 }
             ) {
+                Text(text = "Sign In with credential")
+            }
+            Text(text = "or")
+            Button(onClick = {
+                launcher.launch(authServiceHelper.buildAuthRequestIntent())
+            }) {
                 if (viewModel.inLoading)
                     CircularProgressIndicator(color = Color.White)
                 else
-                    Text(text = "Sign In")
+                    Text(text = "Sign in with social")
             }
         }
         Spacer(modifier = Modifier.weight(1f))
@@ -133,15 +156,14 @@ fun SignInScreen(
                 modifier = Modifier.padding(vertical = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Text(text = "Already have an account?")
+                Text(text = "Don't have an account yet?")
                 Text(
                     modifier = Modifier
-                        .clickable { onSignUpClick() },
+                        .clickable { goToSignUp() },
                     text = "Sign Up",
                     fontWeight = FontWeight.Bold
                 )
             }
         }
-
     }
 }

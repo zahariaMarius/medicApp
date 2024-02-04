@@ -72,7 +72,7 @@ fun SimpleSignUpAlertDialog(
                     },
                     modifier = Modifier.align(Alignment.End)
                 ) {
-                    Text("Go to sign in")
+                    Text("Discover SwagMed app")
                 }
             }
         }

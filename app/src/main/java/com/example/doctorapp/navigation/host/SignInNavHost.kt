@@ -8,8 +8,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.navigation.screen.AuthScreen
-import com.example.doctorapp.navigation.screen.SignUpScreen
 import com.example.doctorapp.presentation.signin.SignInScreen
+import com.example.doctorapp.session.AuthServiceHelper
 
 @Composable
 fun SignInNavHost(
@@ -17,6 +17,7 @@ fun SignInNavHost(
     rootNavHostController: NavHostController,
     navHostController: NavHostController,
     startDestination: String,
+    authServiceHelper: AuthServiceHelper
 ) {
     NavHost(
         modifier = modifier,
@@ -28,7 +29,7 @@ fun SignInNavHost(
             route = AuthScreen.SignIn.route
         ) {
             SignInScreen(
-//                onSignInClick = { rootNavHostController.navigate(Graph.HOME) },
+                authServiceHelper = authServiceHelper,
                 onSignInSuccess = {
                     rootNavHostController.navigate(Graph.HOME) {
                         popUpTo(rootNavHostController.graph.findStartDestination().id) {
@@ -36,7 +37,7 @@ fun SignInNavHost(
                         }
                     }
                 },
-                onSignUpClick = { rootNavHostController.navigate(Graph.SIGNUP) }
+                goToSignUp = { rootNavHostController.navigate(Graph.SIGNUP) }
             )
         }
     }

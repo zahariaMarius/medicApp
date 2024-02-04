@@ -35,7 +35,7 @@ class GetDoctorProfileUseCase @Inject constructor(
                 doctorDatabase.withTransaction {
                     doctorDatabase.dao.clearAll()
                     doctorDatabase.dao.insert(
-                        remoteResponseDto.resultDto.items.first().toDoctorEntity()
+                        remoteResponseDto.result.first().toDoctorEntity()
                     )
                     doctorEntity = doctorDatabase.dao.getDoctorByFiscalCode(doctorFiscalCode)
                 }

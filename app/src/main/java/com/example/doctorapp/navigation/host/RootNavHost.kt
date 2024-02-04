@@ -13,14 +13,17 @@ import com.example.doctorapp.presentation.onboard.OnboardScreen
 import com.example.doctorapp.presentation.signin.SignInScreenContent
 import com.example.doctorapp.presentation.signup.SignUpScreenContent
 import com.example.doctorapp.presentation.signup.SignUpScreenViewModel
+import com.example.doctorapp.session.AuthServiceHelper
 import com.example.doctorapp.session.SessionManager
+import net.openid.appauth.AuthorizationService
 
 @Composable
 fun RootNavHost(
     modifier: Modifier = Modifier,
     navHostController: NavHostController = rememberNavController(),
     startDestination: String,
-    sessionManager: SessionManager
+    sessionManager: SessionManager,
+    authServiceHelper: AuthServiceHelper
 ) {
     NavHost(
         modifier = modifier,
@@ -40,7 +43,8 @@ fun RootNavHost(
             route = Graph.AUTH
         ) {
             SignInScreenContent(
-                rootNavHostController = navHostController
+                rootNavHostController = navHostController,
+                authServiceHelper = authServiceHelper
             )
         }
         composable(
@@ -56,7 +60,8 @@ fun RootNavHost(
         ) {
             HomeScreenContent(
                 rootNavHostController = navHostController,
-                sessionManager = sessionManager
+                sessionManager = sessionManager,
+                authServiceHelper = authServiceHelper
             )
         }
     }

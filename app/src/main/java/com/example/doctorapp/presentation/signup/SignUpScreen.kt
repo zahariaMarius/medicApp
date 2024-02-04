@@ -148,7 +148,7 @@ fun SignUpScreen(
                 modifier = Modifier.padding(vertical = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Text(text = "Have an Account?")
+                Text(text = "Already have an Account?")
                 Text(
                     modifier = Modifier.clickable { onSignInClick() },
                     text = "Sign In",

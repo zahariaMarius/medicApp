@@ -1,5 +1,6 @@
 package com.example.doctorapp.domain.use_case.auth;
 
+import com.example.doctorapp.data.local.database.PatientDatabase;
 import com.example.doctorapp.domain.repository.AuthRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -24,20 +25,26 @@ import javax.inject.Provider;
 public final class SignUpUseCase_Factory implements Factory<SignUpUseCase> {
   private final Provider<AuthRepository> authRepositoryProvider;
 
-  public SignUpUseCase_Factory(Provider<AuthRepository> authRepositoryProvider) {
+  private final Provider<PatientDatabase> patientDbProvider;
+
+  public SignUpUseCase_Factory(Provider<AuthRepository> authRepositoryProvider,
+      Provider<PatientDatabase> patientDbProvider) {
     this.authRepositoryProvider = authRepositoryProvider;
+    this.patientDbProvider = patientDbProvider;
   }
 
   @Override
   public SignUpUseCase get() {
-    return newInstance(authRepositoryProvider.get());
+    return newInstance(authRepositoryProvider.get(), patientDbProvider.get());
   }
 
-  public static SignUpUseCase_Factory create(Provider<AuthRepository> authRepositoryProvider) {
-    return new SignUpUseCase_Factory(authRepositoryProvider);
+  public static SignUpUseCase_Factory create(Provider<AuthRepository> authRepositoryProvider,
+      Provider<PatientDatabase> patientDbProvider) {
+    return new SignUpUseCase_Factory(authRepositoryProvider, patientDbProvider);
   }
 
-  public static SignUpUseCase newInstance(AuthRepository authRepository) {
-    return new SignUpUseCase(authRepository);
+  public static SignUpUseCase newInstance(AuthRepository authRepository,
+      PatientDatabase patientDb) {
+    return new SignUpUseCase(authRepository, patientDb);
   }
 }

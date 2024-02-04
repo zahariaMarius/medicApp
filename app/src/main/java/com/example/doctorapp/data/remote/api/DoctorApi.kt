@@ -13,7 +13,7 @@ import retrofit2.http.Url
 
 interface DoctorApi {
 
-    @POST("search")
+    @POST("doctor/search")
     suspend fun getDoctor(
         @Body doctorRequestDto: DoctorRequestDto
     ): RemoteResponseDto<DoctorDto>

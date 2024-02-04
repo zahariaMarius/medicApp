@@ -21,12 +21,15 @@ import androidx.navigation.compose.rememberNavController
 import com.example.doctorapp.navigation.host.SignInNavHost
 import com.example.doctorapp.navigation.screen.AuthScreen
 import com.example.doctorapp.navigation.screen.SignUpScreen
+import com.example.doctorapp.session.AuthServiceHelper
+import net.openid.appauth.AuthorizationService
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SignInScreenContent(
     rootNavHostController: NavHostController,
-    navHostController: NavHostController = rememberNavController()
+    navHostController: NavHostController = rememberNavController(),
+    authServiceHelper: AuthServiceHelper
 ) {
     Scaffold(
         topBar = {
@@ -40,7 +43,8 @@ fun SignInScreenContent(
             modifier = Modifier.padding(contentPadding),
             rootNavHostController = rootNavHostController,
             navHostController = navHostController,
-            startDestination = AuthScreen.SignIn.route
+            startDestination = AuthScreen.SignIn.route,
+            authServiceHelper = authServiceHelper
         )
     }
 }

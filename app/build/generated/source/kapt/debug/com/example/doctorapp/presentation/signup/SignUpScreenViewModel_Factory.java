@@ -2,6 +2,7 @@ package com.example.doctorapp.presentation.signup;
 
 import com.example.doctorapp.domain.use_case.auth.SignUpUseCase;
 import com.example.doctorapp.domain.use_case.doctor.GetDoctorListUseCase;
+import com.example.doctorapp.session.SessionManager;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -27,24 +28,29 @@ public final class SignUpScreenViewModel_Factory implements Factory<SignUpScreen
 
   private final Provider<GetDoctorListUseCase> getDoctorListUseCaseProvider;
 
+  private final Provider<SessionManager> sessionManagerProvider;
+
   public SignUpScreenViewModel_Factory(Provider<SignUpUseCase> signUpUseCaseProvider,
-      Provider<GetDoctorListUseCase> getDoctorListUseCaseProvider) {
+      Provider<GetDoctorListUseCase> getDoctorListUseCaseProvider,
+      Provider<SessionManager> sessionManagerProvider) {
     this.signUpUseCaseProvider = signUpUseCaseProvider;
     this.getDoctorListUseCaseProvider = getDoctorListUseCaseProvider;
+    this.sessionManagerProvider = sessionManagerProvider;
   }
 
   @Override
   public SignUpScreenViewModel get() {
-    return newInstance(signUpUseCaseProvider.get(), getDoctorListUseCaseProvider.get());
+    return newInstance(signUpUseCaseProvider.get(), getDoctorListUseCaseProvider.get(), sessionManagerProvider.get());
   }
 
   public static SignUpScreenViewModel_Factory create(Provider<SignUpUseCase> signUpUseCaseProvider,
-      Provider<GetDoctorListUseCase> getDoctorListUseCaseProvider) {
-    return new SignUpScreenViewModel_Factory(signUpUseCaseProvider, getDoctorListUseCaseProvider);
+      Provider<GetDoctorListUseCase> getDoctorListUseCaseProvider,
+      Provider<SessionManager> sessionManagerProvider) {
+    return new SignUpScreenViewModel_Factory(signUpUseCaseProvider, getDoctorListUseCaseProvider, sessionManagerProvider);
   }
 
   public static SignUpScreenViewModel newInstance(SignUpUseCase signUpUseCase,
-      GetDoctorListUseCase getDoctorListUseCase) {
-    return new SignUpScreenViewModel(signUpUseCase, getDoctorListUseCase);
+      GetDoctorListUseCase getDoctorListUseCase, SessionManager sessionManager) {
+    return new SignUpScreenViewModel(signUpUseCase, getDoctorListUseCase, sessionManager);
   }
 }

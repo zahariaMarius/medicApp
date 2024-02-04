@@ -31,16 +31,16 @@ class DoctorPagingSource(
             )
 
             LoadResult.Page(
-                data = response.resultDto.items.map { doctorDto ->
+                data = response.result.map { doctorDto ->
                     doctorDto.toDoctor()
                 },
                 prevKey = if (page == 0) null else page.minus(1),
                 nextKey = if (
-                    response.resultDto.totalPages == response.resultDto.currentPage?.plus(1)
+                    response.totalPages == response.currentPage?.plus(1)
                 ) {
                     null
                 } else {
-                    response.resultDto.currentPage?.plus(1)
+                    response.currentPage?.plus(1)
                 }
             )
         } catch (exception: Exception) {

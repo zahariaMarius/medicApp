@@ -13,10 +13,10 @@ import retrofit2.http.Query
 
 interface AuthApi {
 
-    @POST("signin")
+    @POST("patient/search")
     suspend fun signIn(@Body authRequestDto: AuthRequestDto): RemoteResponseDto<PatientDto>
 
     // TODO: possibile errore api/patient/patient
-    @POST("signup")
-    suspend fun signup(@Body patientRequestDto: PatientRequestDto)
+    @POST("patient")
+    suspend fun signup(@Body patientRequestDto: PatientRequestDto): RemoteResponseDto<PatientDto>
 }

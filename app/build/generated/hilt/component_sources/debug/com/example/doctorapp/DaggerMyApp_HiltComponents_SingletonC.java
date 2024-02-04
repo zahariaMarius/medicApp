@@ -13,19 +13,21 @@ import com.example.doctorapp.data.local.database.VisitDatabase;
 import com.example.doctorapp.data.remote.api.AuthApi;
 import com.example.doctorapp.data.remote.api.DoctorApi;
 import com.example.doctorapp.data.remote.api.VisitApi;
+import com.example.doctorapp.data.remote.interceptors.AuthInterceptor;
 import com.example.doctorapp.data.repository.AuthRepositoryImpl;
 import com.example.doctorapp.data.repository.DoctorRepositoryImpl;
 import com.example.doctorapp.data.repository.VisitRepositoryImpl;
 import com.example.doctorapp.di.AppModule;
-import com.example.doctorapp.di.AppModule_ProvideAuthRetrofitFactory;
+import com.example.doctorapp.di.AppModule_ProvideAuthInterceptorFactory;
+import com.example.doctorapp.di.AppModule_ProvideAuthServiceHelperFactory;
+import com.example.doctorapp.di.AppModule_ProvideAuthorizationServiceFactory;
 import com.example.doctorapp.di.AppModule_ProvideDoctorDatabaseFactory;
-import com.example.doctorapp.di.AppModule_ProvideDoctorRetrofitFactory;
 import com.example.doctorapp.di.AppModule_ProvideOkHttpClientFactory;
 import com.example.doctorapp.di.AppModule_ProvidePatientDatabaseFactory;
+import com.example.doctorapp.di.AppModule_ProvideRetrofitFactory;
 import com.example.doctorapp.di.AppModule_ProvideSessionManagerFactory;
 import com.example.doctorapp.di.AppModule_ProvideSharedPreferencesFactory;
 import com.example.doctorapp.di.AppModule_ProvideVisitDatabaseFactory;
-import com.example.doctorapp.di.AppModule_ProvideVisitRetrofitFactory;
 import com.example.doctorapp.di.auth.AuthModule_ProvideAuthApiFactory;
 import com.example.doctorapp.di.auth.AuthModule_ProvideDoctorApiFactory;
 import com.example.doctorapp.di.home.HomeModule_ProvideVisitApiFactory;
@@ -48,6 +50,7 @@ import com.example.doctorapp.presentation.signin.SignInScreenViewModel;
 import com.example.doctorapp.presentation.signin.SignInScreenViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.doctorapp.presentation.signup.SignUpScreenViewModel;
 import com.example.doctorapp.presentation.signup.SignUpScreenViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.doctorapp.session.AuthServiceHelper;
 import com.example.doctorapp.session.SessionManager;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -74,6 +77,7 @@ import java.util.Map;
 import java.util.Set;
 import javax.annotation.processing.Generated;
 import javax.inject.Provider;
+import net.openid.appauth.AuthorizationService;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
@@ -436,6 +440,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
 
     private MainActivity injectMainActivity2(MainActivity instance) {
       MainActivity_MembersInjector.injectSessionManager(instance, singletonCImpl.provideSessionManagerProvider.get());
+      MainActivity_MembersInjector.injectAuthServiceHelper(instance, singletonCImpl.provideAuthServiceHelperProvider.get());
       return instance;
     }
   }
@@ -486,7 +491,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
     }
 
     private GetPatientVisitsUseCase getPatientVisitsUseCase() {
-      return new GetPatientVisitsUseCase(singletonCImpl.provideVisitDatabaseProvider.get(), bindVisitRepositoryProvider.get());
+      return new GetPatientVisitsUseCase(singletonCImpl.provideVisitDatabaseProvider.get(), bindVisitRepositoryProvider.get(), singletonCImpl.provideSessionManagerProvider.get());
     }
 
     private GetPatientProfileUseCase getPatientProfileUseCase() {
@@ -502,7 +507,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
     }
 
     private SignUpUseCase signUpUseCase() {
-      return new SignUpUseCase(bindAuthRepositoryProvider.get());
+      return new SignUpUseCase(bindAuthRepositoryProvider.get(), singletonCImpl.providePatientDatabaseProvider.get());
     }
 
     private GetDoctorListUseCase getDoctorListUseCase() {
@@ -561,7 +566,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
           return (T) new VisitRepositoryImpl(viewModelCImpl.provideVisitApiProvider.get());
 
           case 2: // com.example.doctorapp.data.remote.api.VisitApi 
-          return (T) HomeModule_ProvideVisitApiFactory.provideVisitApi(singletonCImpl.provideVisitRetrofitProvider.get());
+          return (T) HomeModule_ProvideVisitApiFactory.provideVisitApi(singletonCImpl.provideRetrofitProvider.get());
 
           case 3: // com.example.doctorapp.presentation.home.profile.ProfileScreenViewModel 
           return (T) new ProfileScreenViewModel(singletonCImpl.provideSessionManagerProvider.get(), viewModelCImpl.getPatientProfileUseCase(), viewModelCImpl.getDoctorProfileUseCase());
@@ -570,7 +575,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
           return (T) new DoctorRepositoryImpl(viewModelCImpl.provideDoctorApiProvider.get());
 
           case 5: // com.example.doctorapp.data.remote.api.DoctorApi 
-          return (T) AuthModule_ProvideDoctorApiFactory.provideDoctorApi(singletonCImpl.provideDoctorRetrofitProvider.get());
+          return (T) AuthModule_ProvideDoctorApiFactory.provideDoctorApi(singletonCImpl.provideRetrofitProvider.get());
 
           case 6: // com.example.doctorapp.presentation.signin.SignInScreenViewModel 
           return (T) new SignInScreenViewModel(viewModelCImpl.signInUseCase(), singletonCImpl.provideSessionManagerProvider.get());
@@ -579,10 +584,10 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
           return (T) new AuthRepositoryImpl(viewModelCImpl.provideAuthApiProvider.get());
 
           case 8: // com.example.doctorapp.data.remote.api.AuthApi 
-          return (T) AuthModule_ProvideAuthApiFactory.provideAuthApi(singletonCImpl.provideAuthRetrofitProvider.get());
+          return (T) AuthModule_ProvideAuthApiFactory.provideAuthApi(singletonCImpl.provideRetrofitProvider.get());
 
           case 9: // com.example.doctorapp.presentation.signup.SignUpScreenViewModel 
-          return (T) new SignUpScreenViewModel(viewModelCImpl.signUpUseCase(), viewModelCImpl.getDoctorListUseCase());
+          return (T) new SignUpScreenViewModel(viewModelCImpl.signUpUseCase(), viewModelCImpl.getDoctorListUseCase(), singletonCImpl.provideSessionManagerProvider.get());
 
           case 10: // com.example.doctorapp.presentation.home.visit.VisitScreenViewModel 
           return (T) new VisitScreenViewModel(viewModelCImpl.getPatientVisitsUseCase());
@@ -670,19 +675,21 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
 
     private Provider<SessionManager> provideSessionManagerProvider;
 
+    private Provider<AuthorizationService> provideAuthorizationServiceProvider;
+
+    private Provider<AuthServiceHelper> provideAuthServiceHelperProvider;
+
     private Provider<VisitDatabase> provideVisitDatabaseProvider;
+
+    private Provider<AuthInterceptor> provideAuthInterceptorProvider;
 
     private Provider<OkHttpClient> provideOkHttpClientProvider;
 
-    private Provider<Retrofit> provideVisitRetrofitProvider;
+    private Provider<Retrofit> provideRetrofitProvider;
 
     private Provider<PatientDatabase> providePatientDatabaseProvider;
 
-    private Provider<Retrofit> provideDoctorRetrofitProvider;
-
     private Provider<DoctorDatabase> provideDoctorDatabaseProvider;
-
-    private Provider<Retrofit> provideAuthRetrofitProvider;
 
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
@@ -694,13 +701,14 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.provideSharedPreferencesProvider = DoubleCheck.provider(new SwitchingProvider<SharedPreferences>(singletonCImpl, 1));
       this.provideSessionManagerProvider = DoubleCheck.provider(new SwitchingProvider<SessionManager>(singletonCImpl, 0));
-      this.provideVisitDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<VisitDatabase>(singletonCImpl, 2));
-      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 4));
-      this.provideVisitRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 3));
-      this.providePatientDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<PatientDatabase>(singletonCImpl, 5));
-      this.provideDoctorRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 6));
-      this.provideDoctorDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<DoctorDatabase>(singletonCImpl, 7));
-      this.provideAuthRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 8));
+      this.provideAuthorizationServiceProvider = DoubleCheck.provider(new SwitchingProvider<AuthorizationService>(singletonCImpl, 3));
+      this.provideAuthServiceHelperProvider = DoubleCheck.provider(new SwitchingProvider<AuthServiceHelper>(singletonCImpl, 2));
+      this.provideVisitDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<VisitDatabase>(singletonCImpl, 4));
+      this.provideAuthInterceptorProvider = DoubleCheck.provider(new SwitchingProvider<AuthInterceptor>(singletonCImpl, 7));
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 6));
+      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 5));
+      this.providePatientDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<PatientDatabase>(singletonCImpl, 8));
+      this.provideDoctorDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<DoctorDatabase>(singletonCImpl, 9));
     }
 
     @Override
@@ -742,26 +750,29 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
           case 1: // android.content.SharedPreferences 
           return (T) AppModule_ProvideSharedPreferencesFactory.provideSharedPreferences(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 2: // com.example.doctorapp.data.local.database.VisitDatabase 
+          case 2: // com.example.doctorapp.session.AuthServiceHelper 
+          return (T) AppModule_ProvideAuthServiceHelperFactory.provideAuthServiceHelper(singletonCImpl.provideAuthorizationServiceProvider.get(), singletonCImpl.provideSessionManagerProvider.get());
+
+          case 3: // net.openid.appauth.AuthorizationService 
+          return (T) AppModule_ProvideAuthorizationServiceFactory.provideAuthorizationService(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 4: // com.example.doctorapp.data.local.database.VisitDatabase 
           return (T) AppModule_ProvideVisitDatabaseFactory.provideVisitDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 3: // @com.example.doctorapp.common.VisitRetrofit retrofit2.Retrofit 
-          return (T) AppModule_ProvideVisitRetrofitFactory.provideVisitRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
+          case 5: // retrofit2.Retrofit 
+          return (T) AppModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
 
-          case 4: // okhttp3.OkHttpClient 
-          return (T) AppModule_ProvideOkHttpClientFactory.provideOkHttpClient();
+          case 6: // okhttp3.OkHttpClient 
+          return (T) AppModule_ProvideOkHttpClientFactory.provideOkHttpClient(singletonCImpl.provideAuthInterceptorProvider.get());
 
-          case 5: // com.example.doctorapp.data.local.database.PatientDatabase 
+          case 7: // com.example.doctorapp.data.remote.interceptors.AuthInterceptor 
+          return (T) AppModule_ProvideAuthInterceptorFactory.provideAuthInterceptor(singletonCImpl.provideSessionManagerProvider.get());
+
+          case 8: // com.example.doctorapp.data.local.database.PatientDatabase 
           return (T) AppModule_ProvidePatientDatabaseFactory.providePatientDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 6: // @com.example.doctorapp.common.DoctorRetrofit retrofit2.Retrofit 
-          return (T) AppModule_ProvideDoctorRetrofitFactory.provideDoctorRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
-
-          case 7: // com.example.doctorapp.data.local.database.DoctorDatabase 
+          case 9: // com.example.doctorapp.data.local.database.DoctorDatabase 
           return (T) AppModule_ProvideDoctorDatabaseFactory.provideDoctorDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
-
-          case 8: // @com.example.doctorapp.common.AuthRetrofit retrofit2.Retrofit 
-          return (T) AppModule_ProvideAuthRetrofitFactory.provideAuthRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
 
           default: throw new AssertionError(id);
         }

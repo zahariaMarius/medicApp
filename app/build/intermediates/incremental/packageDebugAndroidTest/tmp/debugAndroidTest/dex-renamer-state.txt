@@ -1,12 +1,12 @@
-#Mon Jul 10 15:07:46 CEST 2023
-base.0=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
-base.1=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
-base.2=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/10/classes.dex
-base.3=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/14/classes.dex
-base.4=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/2/classes.dex
-base.5=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/3/classes.dex
-base.6=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/7/classes.dex
-base.7=/home/matteo-miceli/Scrivania/PROGMOB/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/8/classes.dex
+#Tue Jan 16 11:55:13 CET 2024
+base.0=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+base.1=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+base.2=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/10/classes.dex
+base.3=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/14/classes.dex
+base.4=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/2/classes.dex
+base.5=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/3/classes.dex
+base.6=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/7/classes.dex
+base.7=/Users/jrmarius/Desktop/UniTo/magistrale/secondo anno/medicApp/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/8/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=10/classes.dex

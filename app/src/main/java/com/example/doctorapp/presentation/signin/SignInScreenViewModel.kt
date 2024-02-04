@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.auth0.android.jwt.JWT
 import com.example.doctorapp.common.Resource
 import com.example.doctorapp.data.remote.dto.request.AuthRequestDto
 import com.example.doctorapp.domain.use_case.auth.SignInUseCase
@@ -19,7 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignInScreenViewModel @Inject constructor(
     private val signInUseCase: SignInUseCase,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     var email by mutableStateOf("")
@@ -27,10 +28,8 @@ class SignInScreenViewModel @Inject constructor(
     var passwordHidden by mutableStateOf(true)
     var inLoading by mutableStateOf(false)
 
-    fun signIn(onSuccessCallback: () -> Unit) {
-
+    fun signInWithCredential(onSuccessCallback: () -> Unit) {
         val authRequestDto = AuthRequestDto(email, password)
-
         signInUseCase(authRequestDto).onEach { result ->
             when (result) {
                 is Resource.Loading -> {
@@ -40,8 +39,42 @@ class SignInScreenViewModel @Inject constructor(
 
                 is Resource.Success -> {
                     Log.d("SIGNINMODEL", result.toString())
-                    sessionManager.setLoggedUser(result.data!!.fiscalCode)
+                    sessionManager.setUserFiscalCode(result.data!!.fiscalCode)
                     onSuccessCallback.invoke()
+                }
+
+                is Resource.Error -> {
+                    inLoading = !inLoading
+                    Log.d("SIGNINMODEL", result.toString())
+                }
+            }
+        }.launchIn(viewModelScope)
+    }
+
+    fun signInWithSocial(
+        onSuccessCallback: () -> Unit,
+        onFailedCallback: () -> Unit,
+    ) {
+        val authRequestDto = AuthRequestDto(
+            email = JWT(sessionManager.getAuthState().idToken!!).getClaim("email").asString(),
+            password = null
+        )
+        signInUseCase(authRequestDto).onEach { result ->
+            when (result) {
+                is Resource.Loading -> {
+                    Log.d("SIGNINMODEL", "sono in loading")
+                    inLoading = !inLoading
+                }
+
+                is Resource.Success -> {
+                    Log.d("SIGNINMODEL", "result: ${result.data}")
+                    if (result.data != null) {
+                        Log.d("SIGNINMODEL", "data: " + result.data)
+                        sessionManager.setUserFiscalCode(result.data.fiscalCode)
+                        onSuccessCallback.invoke()
+                    } else {
+                        onFailedCallback.invoke()
+                    }
                 }
 
                 is Resource.Error -> {

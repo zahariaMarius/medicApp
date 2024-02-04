@@ -30,11 +30,6 @@ fun HomeNavHost(
             HomeScreen()
         }
         composable(
-            route = HomeScreen.BookVisit.route
-        ) {
-            BookVisitScreen()
-        }
-        composable(
             route = HomeScreen.Profile.route
         ) {
             ProfileScreen()

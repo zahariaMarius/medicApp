@@ -62,7 +62,7 @@ class VisitRemoteMediator(
                     size = state.config.pageSize
                 )
             )
-            val endOfPaginationReached = remoteVisits.resultDto.items.isEmpty()
+            val endOfPaginationReached = remoteVisits.result.isEmpty()
 
             val prevPage = if (loadKey == 0) null else loadKey - 1
             val nextPage = if (endOfPaginationReached) null else loadKey + 1
@@ -72,7 +72,7 @@ class VisitRemoteMediator(
                     visitDatabase.visitDao.clearAll()
                     visitDatabase.remoteKeyDao.clearAll()
                 }
-                val visitEntities = remoteVisits.resultDto.items.map { it.toVisitEntity() }
+                val visitEntities = remoteVisits.result.map { it.toVisitEntity() }
                 val remoteKeyEntities = visitEntities.map { visitEntity ->
                     RemoteKeyEntity(
                         id = visitEntity.id,

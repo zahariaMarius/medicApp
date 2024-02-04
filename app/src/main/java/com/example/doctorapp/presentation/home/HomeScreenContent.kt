@@ -1,5 +1,8 @@
 package com.example.doctorapp.presentation.home
 
+import android.app.Activity
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -52,6 +55,7 @@ import com.example.doctorapp.navigation.graph.Graph
 import com.example.doctorapp.navigation.host.HomeNavHost
 import com.example.doctorapp.navigation.screen.HomeScreen
 import com.example.doctorapp.navigation.screen.SignUpScreen
+import com.example.doctorapp.session.AuthServiceHelper
 import com.example.doctorapp.session.SessionManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -62,12 +66,26 @@ import javax.inject.Inject
 fun HomeScreenContent(
     rootNavHostController: NavHostController,
     navHostController: NavHostController = rememberNavController(),
-    sessionManager: SessionManager
+    sessionManager: SessionManager,
+    authServiceHelper: AuthServiceHelper
 ) {
     val navBackStackEntry by navHostController.currentBackStackEntryAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     val openDialog = remember { mutableStateOf(false) }
+
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult(),
+        onResult = {
+            if (it.resultCode == Activity.RESULT_OK) {
+                sessionManager.logout()
+                rootNavHostController.navigate(Graph.AUTH) {
+                    rootNavHostController.popBackStack()
+                }
+            }
+        }
+    )
+
 
     SimpleModalNavigationDrawer(
         drawerState = drawerState,
@@ -79,7 +97,7 @@ fun HomeScreenContent(
                     title = {
                         when (navBackStackEntry?.destination?.route) {
                             HomeScreen.Home.route -> Text(text = "Home")
-                            HomeScreen.BookVisit.route -> Text(text = "Book visit")
+                            //HomeScreen.BookVisit.route -> Text(text = "Book visit")
                             HomeScreen.Profile.route -> {
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
@@ -137,10 +155,7 @@ fun HomeScreenContent(
                     TextButton(
                         onClick = {
                             openDialog.value = false
-                            sessionManager.logout()
-                            rootNavHostController.navigate(Graph.AUTH) {
-                                rootNavHostController.popBackStack()
-                            }
+                            launcher.launch(authServiceHelper.logOut())
                         }
                     ) {
                         Text("Confirm")

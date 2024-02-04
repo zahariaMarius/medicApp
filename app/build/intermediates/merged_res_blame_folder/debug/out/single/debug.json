@@ -1,158 +1,162 @@
 [
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-xxhdpi_img_doctor_avatar.png.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-xxhdpi/img_doctor_avatar.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-hdpi_ic_launcher_medicapp_foreground.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-hdpi/ic_launcher_medicapp_foreground.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxxhdpi_ic_launcher_medicapp.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxxhdpi/ic_launcher_medicapp.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.doctorapp-main-6:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.doctorapp-merged_res-73:/xml_network_security_config.xml.flat",
+        "source": "com.example.doctorapp-main-75:/xml/network_security_config.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-xhdpi_img_doctor_avatar.png.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-xhdpi/img_doctor_avatar.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.doctorapp-main-6:/xml/data_extraction_rules.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xhdpi_ic_launcher_medicapp.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xhdpi/ic_launcher_medicapp.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable_medicapp_vector.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable/medicapp_vector.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxxhdpi_ic_launcher_medicapp.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxxhdpi/ic_launcher_medicapp.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-mdpi_img_doctor_avatar.png.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-mdpi/img_doctor_avatar.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-mdpi_img_doctor_avatar.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-mdpi/img_doctor_avatar.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xhdpi_ic_launcher_medicapp_round.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xhdpi/ic_launcher_medicapp_round.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-anydpi-v26_ic_launcher_medicapp_round.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-anydpi-v26/ic_launcher_medicapp_round.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-anydpi-v26_ic_launcher_medicapp.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-anydpi-v26/ic_launcher_medicapp.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-mdpi_ic_launcher_medicapp_round.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-mdpi/ic_launcher_medicapp_round.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-mdpi_ic_launcher_medicapp_round.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-mdpi/ic_launcher_medicapp_round.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-xxhdpi_img_doctor_avatar.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-xxhdpi/img_doctor_avatar.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxhdpi_ic_launcher_medicapp_foreground.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxhdpi/ic_launcher_medicapp_foreground.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-xhdpi_img_doctor_avatar.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-xhdpi/img_doctor_avatar.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-hdpi_ic_launcher_medicapp.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-hdpi/ic_launcher_medicapp.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-hdpi_img_doctor_avatar.png.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-hdpi/img_doctor_avatar.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-hdpi_img_doctor_avatar.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-hdpi/img_doctor_avatar.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxxhdpi_ic_launcher_medicapp_round.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxxhdpi/ic_launcher_medicapp_round.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable_medicapp_vector.xml.flat",
-        "source": "com.example.doctorapp-main-6:/drawable/medicapp_vector.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-xxxhdpi_img_doctor_avatar.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-xxxhdpi/img_doctor_avatar.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher_medicapp.xml.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-anydpi-v26/ic_launcher_medicapp.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxxhdpi_ic_launcher_medicapp_foreground.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxxhdpi/ic_launcher_medicapp_foreground.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxhdpi_ic_launcher_medicapp_round.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxhdpi/ic_launcher_medicapp_round.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xhdpi_ic_launcher_medicapp.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xhdpi/ic_launcher_medicapp.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-mdpi_ic_launcher_medicapp.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-mdpi/ic_launcher_medicapp.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/drawable-xxxhdpi_img_doctor_avatar.png.flat",
-        "source": "com.example.doctorapp-main-6:/drawable-xxxhdpi/img_doctor_avatar.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxxhdpi_ic_launcher_medicapp_foreground.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxxhdpi/ic_launcher_medicapp_foreground.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xhdpi_ic_launcher_medicapp_foreground.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xhdpi/ic_launcher_medicapp_foreground.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-hdpi_ic_launcher_medicapp_foreground.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-hdpi/ic_launcher_medicapp_foreground.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxhdpi_ic_launcher_medicapp_round.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxhdpi/ic_launcher_medicapp_round.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxhdpi_ic_launcher_medicapp.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxhdpi/ic_launcher_medicapp.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xhdpi_ic_launcher_medicapp_round.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xhdpi/ic_launcher_medicapp_round.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-hdpi_ic_launcher_medicapp_round.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-hdpi/ic_launcher_medicapp_round.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-mdpi_ic_launcher_medicapp.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-mdpi/ic_launcher_medicapp.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/xml_backup_rules.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xhdpi_ic_launcher_medicapp_foreground.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xhdpi/ic_launcher_medicapp_foreground.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher_medicapp_round.xml.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-anydpi-v26/ic_launcher_medicapp_round.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxxhdpi_ic_launcher_medicapp_round.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxxhdpi/ic_launcher_medicapp_round.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-mdpi_ic_launcher_medicapp_foreground.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-mdpi/ic_launcher_medicapp_foreground.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-hdpi_ic_launcher_medicapp.png.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-hdpi/ic_launcher_medicapp.png"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-hdpi_ic_launcher_medicapp_round.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-hdpi/ic_launcher_medicapp_round.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/xml_backup_rules.xml.flat",
-        "source": "com.example.doctorapp-main-6:/xml/backup_rules.xml"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-mdpi_ic_launcher_medicapp_foreground.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-mdpi/ic_launcher_medicapp_foreground.png"
     },
     {
-        "merged": "com.example.doctorapp-merged_res-4:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.doctorapp-main-6:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxhdpi_ic_launcher_medicapp.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxhdpi/ic_launcher_medicapp.png"
+    },
+    {
+        "merged": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-merged_res-73:/mipmap-xxhdpi_ic_launcher_medicapp_foreground.png.flat",
+        "source": "/Users/jrmarius/.gradle/daemon/8.0/com.example.doctorapp-main-75:/mipmap-xxhdpi/ic_launcher_medicapp_foreground.png"
     }
 ]

@@ -22,27 +22,35 @@ class SignInUseCase @Inject constructor(
         try {
             emit(Resource.Loading<Patient>())
             val remoteResponseDto = authRepository.signIn(authRequestDto)
-            Log.d("USECASE", "invoke: $remoteResponseDto")
+            Log.d("SignInUseCase", "invoke: $remoteResponseDto")
 
-            patientDb.withTransaction {
-                patientDb.dao.clearAll()
-                patientDb.dao.insert(
-                    remoteResponseDto.resultDto.items.map { it.toPatientEntity() }.first()
+            if (remoteResponseDto.result.isEmpty()) {
+                emit(
+                    Resource.Success(
+                        data = null
+                    )
+                )
+            } else {
+                patientDb.withTransaction {
+                    patientDb.dao.clearAll()
+                    patientDb.dao.insert(
+                        remoteResponseDto.result.map { it.toPatientEntity() }.first()
+                    )
+                }
+
+                val patientEntity = patientDb.withTransaction {
+                    patientDb.dao.getByEmail(remoteResponseDto.result.first().email)
+                }
+
+                emit(
+                    Resource.Success(
+                        data = patientEntity.toPatient()
+                    )
                 )
             }
-
-            val patientEntity = patientDb.withTransaction {
-                patientDb.dao.getByEmail(remoteResponseDto.resultDto.items.first().email)
-            }
-
-            emit(
-                Resource.Success(
-                    data = patientEntity.toPatient()
-                )
-            )
 
         } catch (e: Exception) {
-            Log.d("USECASE", e.toString())
+            Log.d("SignInUseCase", e.toString())
             emit(
                 Resource.Error<Patient>(
                     null,
@@ -50,6 +58,5 @@ class SignInUseCase @Inject constructor(
                 )
             )
         }
-
     }
 }

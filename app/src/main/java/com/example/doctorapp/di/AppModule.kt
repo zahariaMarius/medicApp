@@ -3,28 +3,27 @@ package com.example.doctorapp.di
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
-import com.example.doctorapp.common.AuthRetrofit
 import com.example.doctorapp.common.Constants
-import com.example.doctorapp.common.DoctorRetrofit
-import com.example.doctorapp.common.VisitRetrofit
 import com.example.doctorapp.data.local.database.DoctorDatabase
 import com.example.doctorapp.data.local.database.PatientDatabase
 import com.example.doctorapp.data.local.database.VisitDatabase
-import com.example.doctorapp.data.remote.api.AuthApi
-import com.example.doctorapp.data.remote.api.DoctorApi
-import com.example.doctorapp.data.remote.api.VisitApi
+import com.example.doctorapp.data.remote.interceptors.AuthInterceptor
+import com.example.doctorapp.session.AuthServiceHelper
 import com.example.doctorapp.session.SessionManager
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
+import net.openid.appauth.AppAuthConfiguration
+import net.openid.appauth.AuthorizationService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.net.HttpURLConnection
+import java.net.URL
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -40,27 +39,54 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun provideAuthorizationService(@ApplicationContext applicationContext: Context): AuthorizationService {
+        val appAuthConfiguration = AppAuthConfiguration
+            .Builder()
+            .setConnectionBuilder { uri ->
+                URL(uri.toString()).openConnection() as HttpURLConnection
+            }
+            .setSkipIssuerHttpsCheck(true)
+            .build()
+        return AuthorizationService(applicationContext, appAuthConfiguration)
+    }
+
+    @Provides
+    @Singleton
     fun provideSessionManager(sharedPreferences: SharedPreferences): SessionManager {
         return SessionManager(sharedPreferences)
     }
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideAuthServiceHelper(authorizationService: AuthorizationService, sessionManager: SessionManager): AuthServiceHelper {
+        return AuthServiceHelper(authorizationService, sessionManager)
+    }
+
+    @Provides
+    @Singleton
+    fun provideAuthInterceptor(sessionManager: SessionManager): AuthInterceptor {
+        return AuthInterceptor(sessionManager)
+    }
+
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(
+        authInterceptor: AuthInterceptor
+    ): OkHttpClient {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
         return OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(authInterceptor)
             .build()
     }
 
     @Provides
     @Singleton
-    @DoctorRetrofit
-    fun provideDoctorRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(Constants.DOCTOR_BASE_URL)
+            .baseUrl(Constants.RETROFIT_BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(
                 GsonConverterFactory.create(
@@ -72,39 +98,6 @@ object AppModule {
             .build()
     }
 
-    @Provides
-    @Singleton
-    @AuthRetrofit
-    fun provideAuthRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(Constants.AUTH_BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(
-                GsonConverterFactory.create(
-                    GsonBuilder()
-                        .setDateFormat(Constants.DATE_FORMAT)
-                        .create()
-                )
-            )
-            .build()
-    }
-
-    @Provides
-    @Singleton
-    @VisitRetrofit
-    fun provideVisitRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(Constants.VISIT_BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(
-                GsonConverterFactory.create(
-                    GsonBuilder()
-                        .setDateFormat(Constants.DATE_FORMAT)
-                        .create()
-                )
-            )
-            .build()
-    }
 
     @Provides
     @Singleton

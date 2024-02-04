@@ -49,7 +49,7 @@ fun SimpleVisitCard(
 
             ) {
             Column(
-                modifier = Modifier,
+                modifier = Modifier.fillMaxHeight().fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Row(
@@ -80,31 +80,6 @@ fun SimpleVisitCard(
                     Text(text = "Online:", fontWeight = FontWeight.Bold)
                     Text(text = visit.online.toString())
                 }
-            }
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                if (!visit.online) {
-                    Icon(
-                        modifier = Modifier.size(48.dp),
-                        imageVector = Icons.Filled.PinDrop,
-                        contentDescription = "show map"
-                    )
-                    Text(text = "View on map")
-                } else {
-                    Icon(
-                        modifier = Modifier.size(48.dp),
-                        imageVector = Icons.Filled.MeetingRoom,
-                        contentDescription = "meeting"
-                    )
-                    Text(text = "Open meet")
-                }
-
             }
 
         }

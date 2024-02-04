@@ -15,7 +15,7 @@ object HomeModule {
 
     @Provides
     @ViewModelScoped
-    fun provideVisitApi(@VisitRetrofit retrofit: Retrofit): VisitApi {
+    fun provideVisitApi(retrofit: Retrofit): VisitApi {
         return retrofit.create(VisitApi::class.java)
     }
 }

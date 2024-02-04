@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface VisitApi {
 
-    @POST("patient")
+    @POST("visit/search")
     suspend fun getVisits(
         @Body visitsRequestDto: VisitsRequestDto
     ): RemoteResponseDto<VisitDto>
